@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	.btn{
+		width : 100px;
+		display : block;
+		font-size : 15px;
+		padding : 5px 0px;
+		border : 1px solid blue;
+		text-align: center;
+		float : left;
+	}
+	#pos {
+		clear : left;
+	}
+	#row{
+		clear : left;
+	}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+	$(document).ready(
+		function(){
+			$("#pos .btn").on("click",
+				function(){
+
+					var vSport = $(this).data("sport");
+					var vEname = $(this).data("ename")
+
+					$("#sel").append("<option value='" + vEname + "'>" + vSport + "</option>")
+				}
+
+			);
+			
+			$("#sel").on("change",
+				function(){
+					var selectedValue = $(this).val();
+					alert(selectedValue);
+				}
+			)
+
+		}
+	);
+  </script>
+ </head>
+ <body>
+	<div id="pos">
+		<span class="btn" data-sport="야구" data-ename="baseball">야구</span>
+		<span class="btn" data-sport="농구" data-ename="basketball">농구</span>
+		<span class="btn" data-sport="배구" data-ename="valleyball">배구</span>
+	</div>
+	<div class="row">
+		<select id="sel">
+
+		</select>
+	</div>
+ </body>
+</html>

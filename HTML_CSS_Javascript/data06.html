@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type="text/css">
+	.title{
+	
+	width: 400px;
+	font-size : 20px;
+	font-weight: bolder;
+	padding: 5px 0px;
+	text-align:center;
+	background-color: #cdcdcd;
+	border: 1px solid #cccccc;
+
+	}
+
+	.content{
+	
+	width: 400px;
+	font-size : 20px;
+	font-weight: bolder;
+	padding: 5px 0px;
+	text-align:center;
+	background-color: #efefef;
+	border: 1px solid #cccccc;
+	height: 100px;
+
+	}
+  </style>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+	$(document).ready(
+
+		function(){
+
+			$( "#accordion" ).accordion();
+		}
+
+	);
+  </script>
+ </head>
+ <body>
+  
+	<div id="accordion">
+	  <div class="title">삼성전자</div>
+	  
+		<div class="content">
+			안녕하세요 삼성전자 언제 올라요
+		</div>
+
+	  <div class="title">현대모비스</div>
+	  
+		<div class="content">
+			너무 비싸게 샀어요
+		</div>
+	  
+	</div>
+
+ </body>
+</html>

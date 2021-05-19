@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	var Calculator = function(num1, num2){
+		
+		this.Number1 = num1
+		this.Number2 = num2
+
+		this.add = function(){
+			return this.Number1 + this.Number2
+		}
+		this.minus = function(){
+			return this.Number1 - this.Number2
+		}
+		this.multiple = function(){
+			return this.Number1 * this.Number2
+		}
+		this.devide = function(){
+			return this.Number1 / this.Number2
+		}
+	}
+
+	var cal = new Calculator(12, 4);
+	document.write(cal.devide());
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

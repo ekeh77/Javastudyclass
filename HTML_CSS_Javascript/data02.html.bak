@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	.btn{
+		width : 100px;
+		display : block;
+		font-size : 15px;
+		padding : 5px 0px;
+		border : 1px solid blue;
+		text-align: center;
+		float : left;
+	}
+	#pos {
+		clear : left;
+	}
+	#pos2 {
+		clear : left;
+	}
+	#msg {
+		clear : left;
+	}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+	$(document).ready(
+		function(){
+			$("input[name='position01']").on("click",
+				function(){
+					var selectedVal = $(this).val();
+					$("#msg").html(selectedVal);
+				}
+			);//$("input[name='position01']")
+
+			$("#pos span").on("click",
+				function(){
+					var strMsg = $(this).data("name") + $(this).data("pos") + "님 안녕하세요";
+					$("#msg").html(strMsg)
+					
+				}
+			);
+		}	
+	);//$(document).ready
+  </script>
+ </head>
+ <body>
+	<div id="pos">
+		<span class="btn" data-pos="부장" data-name="홍길동"><a>부장 홍길동</a></span>
+		<span class="btn" data-pos="과장" data-name="전우치">과장 전우치</span>
+		<span class="btn" data-pos="대리" data-name="김상동">대리 김상동</span>
+	</div>
+	<div id="pos2">
+		<input type="button" value="부장" class="btn" name="position01" />
+		<input type="button" value="과장" class="btn" name="position01" />
+		<input type="button" value="대리" class="btn" name="position01" />
+	</div>
+	<div id="msg">
+
+	</div>
+ </body>
+</html>

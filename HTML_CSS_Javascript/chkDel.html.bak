@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+
+  </style>
+  <script>
+  	var names = [];
+
+	var setDatas = function(){
+		
+		names[0] = "홍길동";
+		names[1] = "박길자";
+		names[2] = "김문사";
+
+	};
+	
+	var init = function(){
+
+		setDatas();
+	};
+	
+	var makeList = function(){
+		
+		var strHTML = "";
+		for(var i=0; i<names.length; i++){
+			
+			strHTML+= "<div>";
+			strHTML+= "<span>";
+			strHTML+= "<input type='checkbox' name='chk' />";
+			strHTML+= "</span>";
+			strHTML+= "<span>";
+			strHTML+= names[i];
+			strHTML+= "</span>";
+			strHTML+= "</div>";
+		}
+
+		document.getElementById("list").innerHTML = strHTML;
+	}
+
+	var delList = function(){
+
+		var checkLists = document.getElementsByName("chk");
+
+		for(var i=0; i<checkLists.length; i++){
+
+			if(checkLists[i].checked){
+				alret();
+				names.splice(i,1);
+
+			}
+		}
+
+		makeList();
+
+	}
+  </script>
+ </head>
+ <body onload="init();">
+	<div>
+		<input type="button" value="조회" onclick="makeList();" />
+		<input type="button" value="삭제" onclick="delList();" />
+	</div>
+	<div id="list">
+		
+	</div>
+ </body>
+</html>

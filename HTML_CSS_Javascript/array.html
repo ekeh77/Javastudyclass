@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	//배열 - data의 반복
+	var init = function(){
+		
+		var objs = document.getElementsByTagName("span")
+		
+		for(var i=0; i<objs.length; i++){
+			objs[i].innerHTML = i + 1;
+		}
+
+	}
+  </script>
+ </head>
+ <body onload="init();">
+	<div>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+ </body>
+</html>

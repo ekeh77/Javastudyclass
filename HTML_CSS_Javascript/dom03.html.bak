@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	var make_MarkUp = function(){
+		
+		var obj = document.createElement("span");
+		obj.createTextNode("aaaaaa");
+		
+		var parentObj = document.getElementById("msg");
+		parentObj.appendChild(obj);
+
+	}
+
+	var make_MarkUp2 = function(){
+		
+		var strHTML = "<span>aaaaaa</span>";
+
+		document.getElementById("msg").innerHTML = strHTML;
+
+	}
+  </script>
+ </head>
+ <body>
+		<div id="msg">
+
+
+		</div>
+
+		<div>
+			<input type="button" value="확인" onclick="make_MarkUp();"/>
+		</div>
+
+ </body>
+</html>

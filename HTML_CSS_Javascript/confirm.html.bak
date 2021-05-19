@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	//변수 Datatype
+	//1. 숫자타입
+	//2. 문자열 "" ''
+	//3. 배열 []
+	//4. 객체 object
+
+	//내장함수
+	//1. alert(); 경고창을 띄우는것
+	//2. confirm(); 확인창을 띄우는것
+	//3. substr(); 글자 자르는것
+	//4. indexOf(); 글자 찾는것
+	//5. lastIndexOf(); 뒤에서 글자 찾는것 앞에서부터 셈
+	//6. split();
+
+	var test_substr = function(){
+		var str = "0123456789";
+
+		var result = str.substr(-3);
+
+		var obj = document.getElementById("msg");
+
+		obj.innerHTML = result;
+		
+	}
+
+	var test_indexOf = function(){
+		var str = "1234@5678adfg!dfe13";
+
+		var result = str.indexOf("@");
+
+		var obj = document.getElementById("msg");
+
+		obj.innerHTML = result;
+	}
+
+	var test_lastIndexOf = function(){
+		var str = "1234@5678ad@fg!dfe13";
+
+		var result = str.lastIndexOf("@");
+
+		var obj = document.getElementById("msg");
+
+		obj.innerHTML = result;
+	}
+
+	var test_split = function(){
+		var str = "바보,병신,쪼다,18,10";
+
+		var results = str.split(",");
+
+		alert(results);
+	}
+  </script>
+ </head>
+ <body>
+	<input type="button" value="확인" onclick="test_indexOf();"/>
+	<div id="msg">
+		
+	</div>
+ </body>
+</html>

@@ -1,0 +1,26 @@
+
+		#id01{
+			border: 3px dotted red;
+			color:red;
+			font-size:15px;
+		}
+		#id02, #id04, #id06{
+			border: 3px dotted blue;
+		}
+		#id03{
+			width:400px;
+			border: 3px solid yellow;
+			color: #8000ff;
+			font-weight:bolder;
+		}
+		#id05{
+			width:400px;
+			border: 3px solid yellow;
+			font-weight:bolder;
+			font-size:30px;
+		}
+		#id07{
+			width:400px;
+			border: 3px solid pink;
+			font-weight:bolder;
+		}

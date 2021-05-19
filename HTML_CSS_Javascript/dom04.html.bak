@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	var test = function(){
+		//11111
+		var obj = document.getElementById("msg");
+		var objChildren = obj.children;
+
+		for (var i=0; i<objChildren.length; i++)
+		{
+			if(objChildren[i].tagName == "SPAN" ){
+				objChildren[i].innerHTML = 11111;
+			}
+		}
+	};
+	var findObj = function(){
+		var objParent = document.getElementById("msg2");
+
+		var objTables = objParent.children;
+		
+		var objTrs = objTables[0].children;
+		console.log(objTds)
+
+		var objTds = objTrs[1].children;
+
+		objTds.innerHTML = "aaaaaa";
+	}
+  </script>
+ </head>
+ <body>
+	 <div id="container">
+		<div id="msg">
+			<a href="#">네이버</a>
+			<a href="#">다음</a>
+			<span>aaaa</span>
+			<span>bbbbb</span>
+		</div>
+		<div id="msg2">
+			<table border="1" width="300" height="100">
+				<tr>
+					<td width="" align="center">
+					1
+					</td>
+				</tr>
+				<tr>
+					<td width="" align="center">
+					2
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<input type="button" value="확인" onclick="findObj();"/>
+		</div>
+	</div>
+ </body>
+</html>

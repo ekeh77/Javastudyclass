@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+
+  	var bear = {
+		name:"푸", 
+		age:34 
+	};
+
+	$(document).ready(
+
+			function(){
+				
+				$("#add_data").data("bear",bear)
+
+				$("#btn").on("click",
+					
+					function(){
+						alert($("#add_data").data("bear").name);
+					}
+
+				);
+			}
+
+	);
+
+  </script>
+ </head>
+ <body>
+	<div id="msg" data-name="곰돌이" data-age="34">
+		
+	</div>
+	<div id="add_data">
+		
+	</div>
+	<input type="button" value="확인" id="btn">
+ </body>
+</html>

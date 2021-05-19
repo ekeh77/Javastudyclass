@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	
+		var findObj = function(){
+			
+			var objParent = document.getElementById("msg")
+
+			var objSpans = objParent.childNodes;
+			
+			for(var i=0; i<objSpans.length; i++){
+
+			alert(objSpans[i].tagName);
+
+			}
+
+		}
+  </script>
+ </head>
+ <body>
+	<div id="msg">
+	<span>1</span>
+	<span>2</span>
+	<span>3</span>
+	</div>
+	<div>
+		<a href="#" onclick="findObj();">확인</a>
+	</div>
+ </body>
+</html>

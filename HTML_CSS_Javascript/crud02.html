@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+  	var studentList = [];
+	
+	var students = function(number, name){
+			
+		this.number = number;
+		this.name = name;
+
+	}
+
+
+
+	var setList = function(){
+		
+		var strHTML = "";
+
+		for(var i=0; i<studentList.length; i++){
+			strHTML += "<div name='row'>";
+			strHTML += "<span>";
+			strHTML += "<input type='checkbox' name='chk' value='" + i + "' />";
+			strHTML += "</span>";
+			strHTML += "<span>";
+			strHTML += studentList[i].number
+			strHTML += "</span>";
+			strHTML += "<span>";
+			strHTML += "<input type='text' name='stName' id='st" + i + "' value='" + studentList[i].name + "'/>";
+			strHTML += "</span>";
+			strHTML += "</div>";
+		}	
+		document.getElementById("list").innerHTML = strHTML;
+	}
+
+	var addData = function(){
+			
+			var arrynum = studentList.length + 1;
+			
+
+			studentList.push(new students(arrynum, ""));
+
+			setList();
+	}
+
+	var delData = function(){
+		
+		var arrynum = studentList.length - 1;
+
+		var objCHK = document.getElementsByName("chk");
+
+			for (var i=0; i<objCHK.length; i++)
+			{	
+				if(objCHK[i].checked){
+					studentList.splice(i, 1);
+				}
+			}
+			
+			setList();
+		//studentList.splice(arrynum, 1);
+
+		//setList();
+	}
+
+	/*var saveData = function(){
+		for(var i=0; i<studentList.length; i++){
+			var vID = "st" + i;
+			var obj = document.getElementById(vID);
+			var savevalue studentList[i].name(obj.value)
+		}
+
+		setList();
+	}*/
+  </script>
+ </head>
+ <body>
+	<div>
+		<input type="button" value="조회" onclick="setList();"/>
+		<input type="button" value="추가" onclick="addData();"/>
+		<input type="button" value="저장"/>
+		<input type="button" value="삭제" onclick="delData();"/>
+	</div>
+	<div id="list">
+	<!--
+		<div name='row'>
+			<span>
+				<input type='checkbox' name='chk' value='' />
+			</span>
+			<span>
+				<input type='text' name='stName' value=''/>
+			</span>
+		</div>
+		-->
+	</div>
+ </body>
+</html>

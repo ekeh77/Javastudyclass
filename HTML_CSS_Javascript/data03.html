@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type="text/css">
+	#sport span{
+		width : 100px;
+		display : block;
+		font-size : 15px;
+		padding : 5px 0px;
+		border : 1px solid blue;
+		text-align: center;
+		float : left;
+	}
+	#sport{
+		clear : left;
+	}
+	#selectSport{
+		display: block;
+		clear : left;
+	}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+	$(document).ready(
+		function(){
+			$("#sport span").on("click",
+				function(){
+					
+					var sportVal = $(this).data("sport");
+					$("#selectSport").val(sportVal);
+
+				}
+
+			)//$("#sport span").on
+
+		}
+
+	);//$(document).ready
+  </script>
+ </head>
+ <body>
+	<div id="sport">
+		<span id="get" data-sport="야구">야구</span>
+		<span data-sport="축구">축구</span>
+		<span data-sport="농구">농구</span>
+	</div>
+	<select id="selectSport">
+		<option value="야구">야구</option>
+		<option value="축구">축구</option>
+		<option value="농구">농구</option>
+	</select>
+ </body>
+</html>

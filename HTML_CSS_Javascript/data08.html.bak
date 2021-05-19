@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+	$(document).ready(
+		function(){
+			$("sel").on("change",
+				function(){
+					var selectedValue = $(this).val();
+					
+					var strHTML = "";
+					for(var i=0; i<selectedValue; i++){
+						strHTML += "<input type='radio' name='iup' value='' />" + i;
+					}
+					$("#rst01").html(strHTML);
+					
+					$("input[name='iup']").on("click",
+			
+						function(){
+							var chkValue $(this).val()
+							
+							$("#rst02").html("");
+							for(var i=0; i<chkValue; i++){
+								$("rst02").append("<input type='radio' name='iup' value='' />")
+							}
+						}	
+
+					);
+				}
+			);
+
+			
+		}
+	)
+  </script>
+ </head>
+ <body>
+	<div>
+		 <select id="sel">
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+		 </select>
+	</div>
+	<div id="rst01">
+		
+	</div>
+	<div id="rst02">
+		
+	</div>
+ </body>
+</html>

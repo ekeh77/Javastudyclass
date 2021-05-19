@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	.name{
+		font-size:30px;
+		border:2px solid #333333;
+	}
+	.btn{
+		width: 100px;
+		height: 40px;
+	}
+	.row{
+		clear:left;
+	}
+	#list span{
+		display:block;
+		width: 200px;
+		font-size:20px;
+		padding: 8px 0px 7px 0px;
+		border: 1px solid #aaaaaa;
+		border-radius: 7px;
+		float:left;
+		
+		
+	}
+	#list .delbtn{
+		width: 50px;
+		text-align:center;
+		background-color:#cdcdcd;
+		cursor:pointer;
+	}
+	.pop{
+		width: 70px;
+		height: 50px;
+		position: absolute;
+		border: 1px solid #cdcdcd;
+		top: 50px;
+		left: 290px;
+		visibility:hidden;
+	}
+	.pop span{
+		display: block;
+		width: 67px;
+		font-size: 14px;
+		padding:4px 0px 4px 0px;
+		text-align: center;
+	}
+  </style>
+  <script>
+	//crud
+	//Create
+	//Retrieve
+	//Update
+	//Delete
+
+	var datas = [];
+
+	var create = function(){
+
+	
+
+		var inputObj = document.getElementById("name");
+		var inputValue = inputObj.value;
+		
+		//data를 늘린다.
+		//datas 배열에 데이터를 추가
+		datas.push(inputValue);
+		
+		Ret();
+		
+		inputObj.value = "";
+		inputObj.focus();
+		/*
+		var strHTML ="<div class='row'>";
+		strHTML +="<span>" + inputValue + "</span>"
+		strHTML += "<span class='delbtn'>X</span>"
+		strHTML += "</div>"
+		listObj.innerHTML += strHTML;
+
+		
+		*/
+	}
+	var selectedIndex = 0
+	var btnShowHide = function(index){
+		var btnObj = document.getElementById("pop");
+		
+		btnObj.style.top = ((43 * index) + 50) + "px";
+
+		if(selectedIndex != index){
+			btnObj.style.visibility = "visible";
+		}
+		else{
+			if(btnObj.style.visibility == "hidden")
+			{
+				btnObj.style.visibility = "visible";
+			}
+			else
+			{
+				btnObj.style.visibility = "hidden";
+			}
+			}
+		
+		selectedIndex = index
+		
+	}
+
+	var del = function(){
+
+		var isYN = confirm("realy??");
+
+		if(isYN){
+
+		datas.splice(selectedIndex, 1);
+
+		Ret();
+		
+		}
+		var btnObj = document.getElementById("pop");
+		btnObj.style.visibility = "hidden";
+
+	}
+
+	var Ret = function(){
+
+		var strHTML="";
+		for(var i=0; i<datas.length; i++){
+
+			strHTML += "<div class='row'>";
+			strHTML += "<span style='width:25px;'><input type='checkbox' /></span>"
+			strHTML += "<span>" + datas[i] + "</span>"
+			strHTML += "<span class='delbtn' onclick='btnShowHide(" + i + ");'>★</span>"
+			strHTML += "</div>"
+		}
+
+		var listObj = document.getElementById("list");
+		listObj.innerHTML = strHTML;
+
+	}
+  </script>
+ </head>
+ <body>
+	<div>
+		<input type="text" id="name" class="name" />
+		<input type="button" value="추가하기" class="btn" onclick="create();" />
+	</div>
+	<div id="list">
+
+	</div>
+	<div id="pop" class="pop">
+		<span>수정</span>
+		<span onclick="del();">삭제</span>
+	</div>
+ </body>
+</html>

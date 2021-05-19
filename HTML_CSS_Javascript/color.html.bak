@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+
+	var chgColor = function(obj){
+		var getValue = obj.value;
+		var chgDiv = document.getElementById("chgColorDiv")
+		var color = ["red","blue","yellow"]
+		
+
+		for(var i=0; i<color.length; i++)
+		{
+			if(getValue == color[i]){
+				chgDiv.style.backgroundColor  = color[i]
+			}
+		}
+		
+	}
+
+	var selectOne = function(obj){
+
+		
+
+		var nameIs = obj.name;
+		var getName = document.getElementsByName(nameIs);
+			for(var i=0; i<getName.length; i++){
+				getName[i].checked = false;
+			}
+			obj.checked = true;
+		
+	}
+  </script>
+ </head>
+ <body>
+	  <div>
+		<input type="checkbox" name="color1" value="red" onclick="selectOne(this); chgColor(this);">빨강
+		<input type="checkbox" name="color1" value="blue" onclick="selectOne(this); chgColor(this);">파랑
+		<input type="checkbox" name="color1" value="yellow" onclick="selectOne(this); chgColor(this);">노랑
+	  </div>
+	  <div>
+		<input type="radio" name="color2" value="red" onclick="chgColor(this);">빨강
+		<input type="radio" name="color2" value="blue" onclick="chgColor(this);">파랑
+		<input type="radio" name="color2" value="yellow" onclick="chgColor(this);">노랑
+	  </div>
+	  <div>
+		  <select onchange="chgColor(this)">
+			<option value="red">빨강</option>
+			<option value="blue">파랑</option>
+			<option value="yellow">노랑</option>
+		  </select>
+	  </div>
+	  <div id="chgColorDiv" style="width:400px; height:300px; border:1px solid black;">
+		
+	  </div>
+ </body>
+</html>

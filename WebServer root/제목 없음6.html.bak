@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <style>
+	men{
+		font-size: 15px;
+		display:block;
+		border: 1px solid #bbbbbb;
+		width:150px;
+		padding: 5px 0px 5px 0px;
+		text-align: center;
+		float: left;
+	}
+	menus{
+		display:block;
+		clear:left;
+	}
+	.btn{
+		background-color:#277676;
+		color:#ffffff;
+		font-weight:bolder;
+		border-radius: 15px;
+	}
+ </style>
+ <body>
+	<menus>
+		<a href="http://naver.com"><men>메뉴1</men></a>
+		<men>메뉴2</men>
+		<men>메뉴3</men>
+	</menus>
+	<menus>
+		<men>메뉴1</men>
+		<men>메뉴2</men>
+		<men>메뉴3</men>
+	</menus>
+ </body>
+</html>

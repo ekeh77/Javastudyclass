@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	var make_Elements = function(){
+		
+		var obj = document.getElementById("msg");
+		var strHTML = "";
+		strHTML += "<span>1</span>";
+		strHTML += "<span>2</span>";
+		strHTML += "<span>3</span>";
+		
+		obj.innerHTML = strHTML;
+
+	};
+
+	var chg_Span = function(){
+		
+		var obj = document.getElementById("msg2");
+
+		var objChildren = obj.children;
+		console.log(objChildren);
+		var objChildren2 = objChildren[0].children;
+		console.log(objChildren2);
+
+		objChildren2[2].innerHTML = "aaaaaa"
+	}
+
+	var findObj = function(){
+		
+		var objGParents = document.getElementById("msg2");
+		var objParents = objGParents.children;
+		var objSpans = objParents[0].children;
+		objSpans[2].innerHTML = "aaaa"
+		
+	}
+	var findInput = function(){
+		
+		var objGParents = document.getElementById("msg2");
+
+		var objParents = objGParents.children;
+
+		var obj = objParents[1].children;
+
+		var objInput = obj[2].children;
+
+		objInput[0].type = "text"
+
+	}
+  </script>
+ </head>
+ <body>
+	 <div id="container">
+		<div id="msg1">
+
+			<span>1</span>
+			<span>2</span>
+			<span>3</span> 
+
+		</div>
+
+		<div id="msg2">
+			<div>
+				<span>1</span>
+				<span>2</span>
+				<span>3</span> 
+			</div>
+
+			<div>
+				<span>a</span>
+				<span>b</span>
+				<span>
+					<input type="button" value="aaaa"/>
+				</span> 
+			</div>
+		</div>
+
+		<div>
+			<input type="button" value="확인" onclick="findInput();"/>
+		</div>
+		
+		<span>
+			안녕
+		</span>
+
+	</div>
+ </body>
+</html>

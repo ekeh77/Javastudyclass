@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+  .textdiv, .inputdiv{
+	float:left;
+  }
+  .textdiv{
+	text-align:center;
+	font-weight: bold;
+  }
+  div{
+	margin: 5px;
+  }
+  fieldset{
+	width: 820px;
+	height: 400px;
+	border-width: 5px 5px 10px 5px;
+	border-color: #ccccff;
+  }
+  legend{
+	font-size: 50px;
+	color:#cc99ff;
+  }
+  .margin{
+	margin: 10px 0px 0px 0px;
+  }
+  .joinbutton{
+	margin: 110px 0px 0px 500px;
+	}
+  span:hover{
+	color:#cc99ff;
+  }
+  input:hover{
+	border: 2px solid #cc99ff;
+  }
+  input:focus{
+	border: 2px solid #cc99ff;
+  }
+  </style>
+ </head>
+ <body>
+ 	<form name="joinform" action="website">
+		<fieldset>
+			<legend>Join</legend>
+				<div class="textdiv">
+					<div>
+						<span>ID</span>
+					</div>
+					<div>
+						<span>Password</span>
+					</div>
+					<div>
+						<span>Name</span>
+					</div>
+					<div class="margin">
+						<span>Gender</span>
+					</div>
+					<div class="margin">
+						<span>Phone number</span>
+					</div>
+					<div>
+						<span>Email</span>
+					</div>
+					<div>
+						<span>What do you want this website?</span>
+					</div>
+				</div>
+				<div class="inputdiv">
+					<div>
+						<input type="text" name="id" />
+					</div>
+					<div>
+						<input type="text" name="password" />
+					</div>
+					<div>
+						<input type="text" name="name" />
+					</div>
+					<div>
+						<label>male
+							<input type="radio" name="gender" value="M" />
+						</label>
+						<label>female
+							<input type="radio" name="gender" value="F" />
+						</label>
+					</div>
+					<div>
+						<input type="text" name="phonenumber" />
+					</div>
+					<div>
+						<input type="text" placeholder="input your email ID" name="emailid" />
+						<span>@</span>
+						<select name="emailad">
+							<option>naver.com</option>
+							<option>daum.net</option>
+							<option>yahoo.com</option>
+							<option>gmail.com</option>
+						</select>
+					</div>
+					<div>
+						<label>more infomation
+							<input type="checkbox" name="what" value="info" />
+						</label>
+						<label>something fun
+							<input type="checkbox" name="what" value="fun" />
+						</label>
+						<label>i don't know
+							<input type="checkbox" name="what" value="dontknow" />
+						</label>
+						<label>whatever
+							<input type="checkbox" name="what" value="ever" />
+						</label>
+					</div>
+					<div class="joinbutton">
+						<input type="submit" value="Join" />
+					</div>
+				</div>
+		</fieldset>
+	</form>
+ </body>
+</html>

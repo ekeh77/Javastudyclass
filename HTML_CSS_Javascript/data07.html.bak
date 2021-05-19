@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	#radioBox, #textBox{
+		clear: left;
+	}
+	#radioDiv{
+		float: left;
+		border: 1px solid #cdcdcd;
+		padding: 5px 20px;
+	}
+
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+	$(document).ready(
+
+		function()
+		{
+			$("#makeRadioBox").on("change",
+
+				function()
+				{
+					var makeBoxNum = $("#makeRadioBox").val()
+					var strHTML = ""
+
+					for(var i = 0; i<makeBoxNum; i++)
+					{
+						
+						strHTML += "<div id='radioDiv'><input type='radio' name='makeTextBox' value='" + (i+1) + "' /><span>"+ (i+1) +"<span/></div>"
+
+					}//for(var i = 0; i<makeBoxNum; i++)
+
+					$("#radioBox").html(strHTML)
+
+					$("input[name='makeTextBox']").on("click",
+					
+						function()
+						{
+							
+							var chkNum = $("input:checked").val();
+							
+
+							for(var i=0; i<chkNum; i++){
+								
+								$("#textBox").append("<div id='textDiv'><input type='text' /><input type='button' value='" + (i+1) + "'></div>")
+
+							}//for(var i=0; i<chkNum; i++)
+
+						}//$("input").on function
+
+					)//$("input").on
+
+				}//$("#makeRadioBox").onfunction
+			
+
+			);//$("#makeRadioBox").on
+			
+			$("#allDel").on("click",
+			
+				function(){
+
+					$("#radioBox").html("");
+					$("#textBox").html("");
+				
+				}//$("#allDel").on function
+			
+			)//$("#allDel").on
+			
+		}//$(document).ready function
+
+	);//$(document).ready
+
+	
+  </script>
+ </head>
+ <body>
+	 <div id="selectBox">
+		<select id="makeRadioBox">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+		</select>
+	</div>
+	<div id="radioBox">
+		
+	</div>
+	<div id="textBox">
+
+	</div>
+	<div>
+		<input type="button" value="초기화" id="allDel"/>
+	</div>
+ </body>
+</html>
