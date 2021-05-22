@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	var test = function(){
+		
+		var filename = "file:///C:/Users/PKNU/Desktop/project/aaa.txt";
+
+		var cutName = filename.lastIndexOf("/");
+		var finalName = filename.substr(cutName+1);
+		
+		var obj = document.getElementById("msg");
+
+		obj.innerHTML = finalName;
+		
+		/* 다른방법 */
+
+		var filename2 = "file:///C:/Users/PKNU/Desktop/project/aaa.txt";
+
+		var filename2Length = filename2.length;
+		var cutName2 = filename2.lastIndexOf("/");
+
+		var finalName2 = filename.substr(-(filename2Length-cutName2));
+		console.log(finalName2)
+
+
+	}
+  </script>
+ </head>
+ <body>
+ 	<input type="file" id="file" />
+	<input type="button" value="확인" onclick="test();"/>
+	<div id="msg">
+		
+	</div>
+ </body>
+</html>

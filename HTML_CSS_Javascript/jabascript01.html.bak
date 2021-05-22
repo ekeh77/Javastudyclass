@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+  	/*function a(){
+		document.getElementById("aaa").innerHTML = "HELLO WORLD";
+	}*/
+	var num = 7;
+	var a = 8;
+	var result = num + a;
+
+	//document.write(result);
+	/*
+	var name = "네잎클로바";
+	var name2 = "345";
+	var result2 = name + name2 ;
+	document.write(result2);
+	*/	
+	var name;
+	var cls;
+	var result;
+
+	name = "홍길동";
+	cls = "1학년3반";
+	result = "이름은 " + name + "이고, " + cls + "입니다.";
+	document.write(result);
+  </script>
+ </head>
+ <body>
+ <!--
+	<div id="aaa"></div>
+	<input type="button" value="확인" onclick="a();" />
+	-->
+ </body>
+</html>

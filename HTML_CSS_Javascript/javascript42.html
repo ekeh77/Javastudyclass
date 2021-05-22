@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	.menu{
+		width:100px;
+		height: 50px;
+		border-width: 1px 1px 1px 1px; 
+		border-color: black; 
+		border-style: solid;
+		float: left;
+		text-align: center;
+		cursor:pointer;
+	}
+	.menu2{
+		width:100px;
+		height: 50px;
+		border-width: 1px 1px 1px 0px; 
+		border-color: black; 
+		border-style: solid;
+		float: left;
+		text-align: center;
+		cursor:pointer;
+	}
+	.div{
+		clear: left;
+	}
+	.content{
+		width:201px;
+		height: 300px;
+		border-width: 0px 1px 1px 1px; 
+		border-color: black; 
+		border-style: solid;
+		text-align: center;
+	}
+	#mainDiv{
+		width:200px;
+		height: 300px;
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	#introduceCafe{
+		width:150px;
+		margin: 15px 0px;
+		border-width: 1px 0px 1px 0px; 
+		border-color: #999999; 
+		border-style: solid;
+		display:flex;
+		padding: 10px;
+		flex-direction: column;
+		align-items: center;
+	}
+	#introduceCafe span{
+		display:block;
+	}
+	#member{
+		width:150px;
+		border-width: 0px 0px 1px 0px; 
+		border-color: #999999; 
+		border-style: solid;
+		display:flex;
+		padding: 0px 10px 10px 10px;
+		flex-direction: column;
+		align-items: center;
+		margin:10px 0px;
+	}
+	#cafeWrite{
+		background-color: #666666;
+		color: #ffffff;
+		padding: 5px 50px;
+		margin: 10px 0px;
+		cursor:pointer;
+	}
+	#cafeChat{
+		padding: 5px 58px;
+		border-width: 1px 1px 1px 1px; 
+		border-color: #999999; 
+		border-style: solid;
+		cursor:pointer;
+	}
+  </style>
+  <script>
+	function first(){
+		var content = document.getElementById("content_D");
+		var first = document.getElementById("first_D");
+		var second = document.getElementById("second_D");
+		 first.style = "border-width: 2px 1px 0px 2px; border-color: black; border-style: solid;";
+		 second.style = "border-width: 1px 1px 1px 1px; border-color: black; border-style: solid;";
+		 content.style = "border-width: 0px 2px 2px 2px; border-color: black; border-style: solid;";
+		content.innerHTML = "<div id='mainDiv'>" +
+								"<div id='introduceCafe'>" +
+									"<span>네잎클로바</span>" +
+									"<span>since 2021.02.13</span>" +
+									"<span>카페소개</span>" +
+								"</div>" +
+								"<div id='member'>" +
+									"<span>즐겨찾는멤버</span>" +
+								"</div>" +
+								"<div>" +
+									"<span><b>주제</b> 컴퓨터/통신</span>" +
+								"</div>" +
+								"<div id='cafeWrite'>" +
+									"<span>카페 글쓰기</span>" +
+								"</div>" +
+								"<div id='cafeChat'>" +
+									"<span>카페 채팅</span>" +
+								"</div>" +
+							"</div>"
+	}
+	function second(){
+		var content = document.getElementById("content_D");
+		var first = document.getElementById("first_D");
+		var second = document.getElementById("second_D");
+		first.style = "border-width: 1px 1px 1px 1px; border-color: black; border-style: solid;";
+		 second.style = "border-width: 2px 2px 0px 1px; border-color: black; border-style: solid;";
+		 content.style = "border-width: 0px 2px 2px 2px; border-color: black; border-style: solid;";
+		 content.innerHTML = "<div><span>만들기가</span></div><div><span>넘모넘모</span></div><div><span>구찮다</span></div><div><span>힝힝히</span></div>"
+	}
+  </script>
+ </head>
+ <body>
+	<div class="div">
+		<div class="menu" id="first_D" onclick="first();"><span>첫번째</span></div>
+		<div class="menu2" id="second_D" onclick="second();"><span>두번째</span></div>
+	</div>
+	<div class="div">
+		<div id="content_D" class="content">content</div>
+	</div>
+	
+ </body>
+</html>

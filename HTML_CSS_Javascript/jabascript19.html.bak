@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+
+  	var rndNumber = 0;
+	var result = 0;
+	var strPrint ="";
+	for(var i=0; i<10; i++){
+		
+		rndNumber = parseInt(Math.random() * 100);
+		
+		if(rndNumber > 50 && rndNumber < 70){
+			document.write(rndNumber + "+")
+			result = result + rndNumber;
+		}
+	}
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

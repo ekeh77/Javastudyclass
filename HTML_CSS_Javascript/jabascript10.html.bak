@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>문자연결</title>
+
+  <script>
+	var school = "부경대학교";
+	var name ="홍길동";
+	var age = 33;
+
+	//홍길동은 33살입니다. (33이라는 글자의 색깔을 파란색으로 표시)
+
+	var result = ""; 
+	result += "<div>";
+	result += name ;
+	result += "은 ";
+	result += "<font color='blue'>";
+	result += age;
+	result += "</font>";
+	result += "살 입니다.";
+	result += "</div>";
+
+	document.write(result);
+  </script>
+ 
+ </head>
+ <body>
+	<!--<table border="1" width="300px" align="center">
+		<tr>
+			<td width="300px" height="25px">
+				<span>안녕하세요</span>
+			</td>
+		</tr>
+		<tr>
+			<td width="300px" height="25px">
+				<span>안녕하세요</span>
+			</td>
+		</tr>
+		<tr>
+			<td width="300px" height="25px">
+				<span>안녕하세요</span>
+			</td>
+		</tr>
+		<tr>
+			<td width="300px" height="25px">
+				<span>안녕하세요</span>
+			</td>
+		</tr>
+	</table>-->
+ </body>
+</html>

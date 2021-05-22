@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+
+	var menus = [];
+
+	//페이지가 로딩되면 무조건 읽히는 초기화 함수
+	function init(){
+		initMenus();
+		var strHTML = makeMenus();
+		document.getElementById("menus_names").innerHTML = strHTML;
+	}
+
+	//메뉴이름 데이터들을 초기화하는 함수
+	function initMenus(){
+		menus[0] = "메뉴1";
+		menus[1] = "메뉴2";
+		menus[2] = "메뉴3";
+		menus[3] = "메뉴4";
+		menus[4] = "메뉴5";
+	}
+	
+	//메뉴를 만들어서 리턴해주는 함수
+	var makeMenus = function(){
+		var strHTML = "";
+		for(var i=0; i< menus.length; i++){
+			strHTML += "<span class='bbb' id='rec1'>" + menus[i] + "</span>";
+		}
+		return strHTML
+	}
+  </script>
+ </head>
+ <body onload="init();">
+	<div class="aaa" id="menus_names">
+
+	</div>
+ </body>
+</html>

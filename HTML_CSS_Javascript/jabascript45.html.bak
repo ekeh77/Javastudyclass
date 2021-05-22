@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+  	/*
+	//1.입력값(있을수도 있고, 없을수도 있다)
+	function getTV(){
+		return "tv";
+	}
+	function getComputer(){
+		return "Computer";
+	}
+	var t = getTV();
+	var arrTV = null;
+	for(var i=0, i<10; i++){
+		arrTV[i] = getComputer();
+	}
+	*/
+	function show(){
+		var obj = document.getElementById("userID");
+		obj.type = "radio"
+		obj.innerHTML = "<label>앙기목띠</label>"
+	}
+  </script>
+ </head>
+ <body>
+	<input type="text" id="userID" />
+	<input type="button" value="확인" onclick="show();" />
+ </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+  	function tree(){
+		var j = 10
+		var u = 1
+		for (var i = 1; i<=10; i++)
+		{
+			for(var l= 1; l<=10; l++){
+				console.log(u)
+				if(u < j){
+					document.write("&nbsp;");
+				}
+				else{
+					document.write("*");
+				}
+				
+			}
+			u += 1;
+			j -= 1;
+			
+		document.write("<br/>");
+		}
+	}
+  
+  </script>
+ </head>
+ <body>
+  <div>
+	<input type="button" value="확인" onclick="tree()" />
+  </div>
+ </body>
+</html>

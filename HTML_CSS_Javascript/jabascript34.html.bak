@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+  	//submit - 전송이 이루어질 때
+	function f_submit(){
+		alert("숴버로꺼져!@#");
+	}
+	function f_reset(){
+		var isResult = confirm("진짜로 지운다고 미쳤지?")
+
+		if(isResult){
+			alert("진짜 미쳤구나");
+		}
+		else{
+			return false;
+			alert("그래 착하구나");
+		}
+	}
+	//onload
+	function f_load(){
+		alert("어서오세용!!!")
+	}
+	//unload
+	function f_unload(){
+		alert("ㅂ2")
+	}
+  </script>
+ </head>
+ <body onload="f_load();" onunload="f_unload();">
+	<form name="myForm" id="myForm" action="./jabascript33.html" onsubmit="f_submit();" onreset="reset f_reset();">
+		<input type="text" name="userID" id="userID" />
+		<input type="reset" value="초기화" />
+		<input type="submit" value="서버로 꺼져!!!!!" />
+	</form>
+ </body>
+</html>

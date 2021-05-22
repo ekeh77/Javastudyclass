@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title></title>
+  <style>
+	#msg{
+		width: 300px;
+		height: 200px;
+		border:1px solid red;
+		background-color: #dddddd;
+		cursor:pointer;
+	}
+  </style>
+  <script>
+	//태그의 아이디를 주면 그 아이디의 객체를 생성해서 돌려주는 함수
+	function getObjectById(varID){
+		var obj2 = document.getElementById(varID);
+		return obj2;
+	}
+  	//click evernt가 발생하면 실행되는 함수 - 이벤트핸들러 - eventhandler
+	
+  	function chg_text(){
+		var obj = getObjectById("msg");
+		obj.innerHTML = "클릭했어요";
+	}
+
+	//mouseover - 마우스가 특정태그 공간으로 올라오면
+	function chg_BKColor(){
+		var obj = getObjectById("show");
+		obj.style = "background-color:yellow;";
+	}
+	//mouseout - 마우스 포인트가 특정 태그공간에서 밖으로 나가면
+	function chg_BKColor2(){
+		var obj = getObjectById("show");
+		obj.style = "background-color:#dddddd;";
+	}
+	//dblclick - 마우스왼쪽 더블 클릭시
+	function f_dbclick(){
+		var obj = getObjectById("msg");
+		alert();
+	}
+  </script>
+ </head>
+ <body>
+  <div id="show" style="width:300px;height:200px;border:1px solid red" onclick="chg_text();"
+  onmouseover="chg_BKColor();" 
+  onmouseout="chg_BKColor2();">
+	클릭이벤트
+  </div>
+  <div id="msg" 
+  onclick="chg_text();"
+  ondblclick="f_dbclick();">
+   오버이벤트
+  </div>
+ </body>
+</html>

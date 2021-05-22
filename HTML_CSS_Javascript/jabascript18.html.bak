@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+  	var rndNumbers = [];
+	var rndNumbers2 = [];
+	var finalNumbers = 0;
+	var displayNumbers = "";
+	var l = 0;
+  	for (var i=0; i<10; i++)
+	{
+		var rndNumber = parseInt(Math.random() * 100);
+		rndNumbers[i] = rndNumber
+	}
+
+  	for (var j=0; j<rndNumbers.length; j++)
+	{	
+		if(rndNumbers[j] > 50 && rndNumbers[j] < 70){
+			rndNumbers2[l] = rndNumbers[j];
+			finalNumbers += rndNumbers[j];
+			l += 1;
+		}
+	}
+
+	for (var n=0; n < rndNumbers2.length; n++)
+	{	
+		if(n == rndNumbers2.length-1){
+			displayNumbers += rndNumbers2[n]
+		}
+		else{
+			displayNumbers += rndNumbers2[n] + " + "
+		}
+	}
+
+	document.write(displayNumbers + " = " + finalNumbers)
+
+	//랜덤값을 10개 생성
+	//랜덤값중 50보다 크고 70보다 작은 값을 찾아서 그 합을 구하자
+	//결과 55 + 65 + 70 + 80 = 270
+
+	
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

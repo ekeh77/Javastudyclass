@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+	<script>
+	function chk_char(){
+		 var data = "aslm213ds1asd2561f5a6sd564f5sd6";
+		 //data중에 특정문자열(256) 찾는 함수
+
+		 var result = data.indexOf("256");
+
+		 if (result != -1)
+		 {
+			 alert("사용가능한 데이터입니다.")
+		 }
+	 }
+	 function plus(num1, num2){
+		var result = num1 + num2;
+		return result
+	 }
+	 function minus(num1, num2){
+		var result = num1 - num2;
+	 }
+	 function plusClick(){
+		var obj = document.getElementById("number1");
+		var obj2 = document.getElementById("number2");
+		var obj3 = document.getElementById("number3");
+		
+		plus(obj.value,obj.value)
+		
+	 }
+	 function minusClick(){
+		
+	 }
+	</script>
+ </head>
+ <body>
+ 	<div>
+		<input type="text" id="number1" style="font-size:30px;"/>
+		<input type="text" id="number2" style="font-size:30px;"/>
+		<input type="text" id="number3" style="font-size:30px;"/>
+	</div>
+	<div>	
+		<input type="button" value="+"  style="font-size:30px;" onclick="plusClick();"/>
+		<input type="button" value="-"  style="font-size:30px;" onclick="minusClick();"/>
+	</div>
+ </body>
+</html>

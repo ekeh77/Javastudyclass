@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	//조건문과 반복문
+	/*
+	var num = 0
+	for (var i=1; i<100; i++)
+	{
+		if(i % 3 == 0){
+			num += i
+		}
+	}
+	alert(num);
+	*/
+	//문제 1부터 100까지중 3의배수 합을 구하자
+
+	//구구단
+	var gugudan = function(){
+	var strHTML = "";
+	var result = 0;
+		for(var i=1; i<=9; i++){
+			
+			for(var j=1; j<=9; j++){
+				
+				result = i * j;
+				strHTML += i + " X " + j + " = " + result + "<br/>";
+			}
+
+		}
+		document.getElementById("msg").innerHTML = strHTML
+	}
+  </script>
+ </head>
+ <body onload="gugudan">
+	<div id="msg">
+		
+	</div>
+ </body>
+</html>

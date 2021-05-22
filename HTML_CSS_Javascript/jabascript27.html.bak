@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+  	font{
+		display:block;
+		width:300px;
+		height:30px;
+		border:1px solid red;
+	}
+  </style>
+  <script>
+	function chg_font(){
+		var arrObj = document.getElementsByTagName("font");
+		for(var i=0; i<arrObj.length; i++){
+			arrObj[i].size = "7"
+		}
+	}
+  </script>
+ </head>
+ <body>
+	<div>
+		<font>1</font>
+		<font>2</font>
+		<font>3</font>
+		<font>4</font>
+	</div>
+	<div>
+		<input type="button" value="확인" onclick="chg_font();"/>
+	</div>
+ </body>
+</html>

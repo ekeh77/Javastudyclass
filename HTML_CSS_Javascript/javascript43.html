@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	function chk_value(){
+		//아무것도 선택하지 않았을 때
+		//선택을 하도록 경고창을 띄워보자
+		/*
+		var obj = document.getElementById("male");
+		var obj2 = document.getElementById("female");
+		var obj3 = document.getElementById("etc");
+
+		if (!obj.checked && !obj2.checked && !obj3.checked)
+		{
+			alert("성별을 선택해 주세요");
+		}
+		else{
+			alert("성별이 선택되었습니다");
+		}
+		*/
+
+		var objRadios = document.getElementsByName("gender");
+
+		var resultNum = 0;
+
+		for(var i=0; i<objRadios.length; i++)
+		{
+			if(objRadios[i].checked == false)
+			{
+				resultNum += 1;
+			}
+		}
+		if(resultNum == objRadios.length)
+		{
+			alert("성별을 선택해 주세요");
+		}
+	}
+  </script>
+ </head>
+ <body>
+ 	<div>
+		<label>
+			<input type="radio" id="male" name="gender" value="M" />
+			<span>남자</span>
+		<label>
+	</div>
+	<div>
+		<label>
+			<input type="radio" id="female" name="gender" value="F" />
+			<span>여자</span>
+		<label>
+	</div>
+	<div>
+		<label>
+			<input type="radio" id="etc" name="gender" value="E" />
+			<span>기타</span>
+		<label>
+	</div>
+	<div>
+		<input type="button" value="확인" onclick="chk_value()">
+	</div>
+ </body>
+</html>

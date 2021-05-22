@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	function onlyNumber(){
+		var arrayNumber = [];
+		var Cnumber = document.getElementById("number").value;
+		var plusnumber = 0
+
+			for (var i=0; i<Cnumber.length ; i++)
+		{
+			arrayNumber[i] = Cnumber.substr(i,1);
+		}
+		for (var j=0;j<arrayNumber.length ; j++)
+		{
+			for (var l=0; l<10; l++)
+			{
+				var Rnumber = arrayNumber[j].indexOf(l)
+				if(Rnumber == -1){
+					plusnumber +=1
+				}
+				else{
+					plusnumber -=1
+				}
+			}
+			console.log(plusnumber)
+			if (plusnumber%8 == 0)
+			{
+			}
+			else{
+				alert("숫자를 입력해주세요");
+				Cnumber = Cnumber.length-1
+			}
+			plusnumber = 0
+		}
+	}
+  </script>
+ </head>
+ <body>
+	<input type="text" id="number" onkeyup="onlyNumber();"/>
+ </body>
+</html>

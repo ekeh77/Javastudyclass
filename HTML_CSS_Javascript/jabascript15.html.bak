@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+
+  	var strName = ["홍길동","전우치","신데렐라"];
+	var scroe = [70,80,90];
+	var rank = [3,2,1];
+	
+	var strName02 = "전우치";
+	var scroe02 = 80;
+	var rank02 = 2;
+	
+	var strName03 = "신데렐라";
+	var scroe03 = 90;
+	var rank03 = 1;
+
+  	function show_rst(){
+		
+		var strHTML ="";
+
+		strHTML += "<table border='1' width='300px' align='center'>";
+
+		//여기서부터 <tr> 반복 시작 1
+		strHTML += "	<tr>";
+		strHTML += "		<td width='100' height='25' align='center'>";
+		strHTML += "			이름";
+		strHTML += "		</td>"
+		strHTML += "		<td width='100' height='25' align='center'>";
+		strHTML += "			점수";
+		strHTML += "		</td>"
+		strHTML += "		<td width='100' height='25' align='center'>";
+		strHTML += "			순위";
+		strHTML += "		</td>"
+		strHTML += "	</tr>";
+		//여기서부터 <tr> 반복 끝
+
+
+		
+
+		for(var i=0; i < strName.length ; i++){
+
+		//여기서부터 <tr> 반복 시작 1
+		strHTML += "	<tr>";
+		strHTML += "		<td width='100' height='25' align='center'>";
+		strHTML +=				strName;
+		strHTML += "		</td>"
+		strHTML += "		<td width='100' height='25' align='center'>";
+		strHTML +=				scroe[i];
+		strHTML += "		</td>"
+		strHTML += "		<td width='100' height='25' align='center'>";
+		strHTML +=				rank[i];
+		strHTML += "		</td>"
+		strHTML += "	</tr>";
+		//여기서부터 <tr> 반복 끝
+
+		}
+
+		strHTML += "</table>";
+
+		document.getElementById("msg").innerHTML = strHTML;
+	}
+  </script>
+ </head>
+ <body>
+	<div id="msg">
+
+	</div>
+	<div>
+		<input type="button" value="성적결과보기" onclick="show_rst();"/>
+	</div>
+ </body>
+</html>

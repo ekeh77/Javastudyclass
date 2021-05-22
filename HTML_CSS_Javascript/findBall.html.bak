@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+
+	var findBall = function(){ 
+
+		var menus = ["유도","양궁","배구","야구","농구","구술","축구","노노구"];
+		
+		//위의 데이터중에 구기종목을 찾아주세요
+
+		var findLastWord = [];
+		var result = [];
+		var strHTML = "";
+		var obj = document.getElementById("msg");
+
+		for(var j=0; j<menus.length; j++){
+			if( menus[j].substr(-1) == "구" ){
+				result.push(menus[j]);
+			}
+		}
+
+		for(var n=0; n<result.length; n++){
+			strHTML += result[n] + "<br/>"
+		}
+
+		obj.innerHTML = strHTML
+	}
+	
+  </script>
+ </head>
+ <body onload="findBall();">
+	<div id="msg">
+		
+	</div>
+ </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+  /*function test(){
+	window.location.href="http://www.naver.com"
+	}*/
+	//1.더하기
+	function plus(a, b){
+		var c = a + b;
+		document.write(c);
+	}
+	plus(5, 12);
+	plus("aaaa", "vvvv");
+	/*
+	//2.빼기
+	function minus(){
+		
+	}*/
+  </script>
+ </head>
+ <body>
+  <input type="button" value="확인" onclick="test();">
+ </body>
+</html>

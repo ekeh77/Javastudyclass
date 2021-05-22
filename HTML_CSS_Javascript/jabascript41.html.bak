@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	input{
+		width:100px;
+		height:50px;
+	}
+	#msg{
+		border:1px solid blue;
+		width: 400px;
+		height: 100px;
+		font-size:30px;
+	}
+  </style>
+  <script>
+	function Bprint(number, color){
+		var Gdiv = document.getElementById("msg");
+		var Ginput = document.getElementById("btn"+number);
+		Gdiv.innerHTML = Ginput.value;
+		Gdiv.style = "background-color:" + color;
+	}
+  </script>
+ </head>
+ <body>
+ 	<div>
+		<input type="button" id="btn1" value="1" onclick="Bprint('1', red);" />
+		<input type="button" id="btn2" value="2" onclick="Bprint('2', blue);" />
+		<input type="button" id="btn3" value="3" onclick="Bprint('3', yellow);" />
+		<input type="button" id="btn4" value="4" onclick="Bprint('4', orange);" />
+	</div>
+	<div id="msg">
+	</div>
+ </body>
+</html>

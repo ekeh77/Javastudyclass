@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>회원관리폼</title>
+  <link rel="stylesheet" href="./css/member.css" />
+  <script src="./js/member.js"></script>
+ </head>
+ <body onload="init();">
+	<div id="wrap">
+		<form name="memberForm" id="memberForm" action="./memberJoin.jsp">
+			
+			<!--아이디 -->
+			<div class="line">
+				<span class="row1">아이디</span>
+				<span class="row2">
+					<span class="col1">
+						<input type="text" name="userID" id="userID" class="textbox1" onblur="chkValue('userID','idMsg');"/>
+					</span>
+					<span class="col2">
+						@naver.com
+					</span>
+				</span>
+				<span id="idMsg" class="msg"></span>
+			</div>
+
+			<div class="line">
+				<span class="row1">비밀번호</span>
+				<span class="row2">
+					<input type="text" name="userPass" id="userPass" class="textbox1" style="width:396px;" onblur="chkValue('userPass','passMsg');"/>
+				</span>
+				<span id="passMsg" class="msg"></span>
+			</div>
+
+			<div class="line">
+				<span class="row1">비밀번호확인</span>
+				<span class="row2">
+					<input type="text" name="userPass" id="userPass_Re" class="textbox1" style="width:396px;" onblur="chkValue('userPass_Re','passMsg_Re');chkPass();"/>
+				</span>
+				<span id="passMsg_Re" class="msg"></span>
+			</div>
+
+			<div style="height:30px;"></div>
+
+			<div class="line">
+				<span class="row1">이름</span>
+				<span class="row2">
+					<input type="text" name="userName" id="userName" class="textbox1" style="width:396px;" onblur="chkValue('userName','nameMsg');"/>
+				</span>
+				<span id="nameMsg" class="msg"></span>
+			</div>
+			
+			<div class="line">
+				<span class="row1">생년월일</span>
+				<span id="userBirth" >
+					<span class="row2">
+						<input type="text" name="userYear" id="userYear" class="textbox1" style="width:120px;" placeholder="년(4자)" onblur="chk_Year(this);"/>
+					</span>
+					<span class="empty"></span>
+					<span class="row2">
+						<select id="userMonth" name="userMonth" onchange="chk_Month();">
+							
+						</select>
+					</span>
+					<span class="empty"></span>
+					<span class="row2">
+						<input type="text" name="userDay" id="userDay" class="textbox1" style="width:120px;" placeholder="일"/>
+					</span>
+				</span>
+				<span id="birthMsg" class="msg"></span>
+			</div>
+
+			<div class="line" id="">
+				<span class="row1">성별</span>
+				<span class="row2">
+					<label>
+						<input type="radio" id="userGender1" name="userGender" value="M" class="gender"/> <span class="rTxt">남자</span>
+					</label>
+					<label>
+						<input type="radio" id="userGender2" name="userGender" value="M" class="gender"/> <span class="rTxt">여자</span>
+					</label>
+					<label>
+						<input type="radio" id="userGender3" name="userGender" value="M" class="gender"/> <span class="rTxt">선택안함</span>
+					</label>
+				</span>
+				<span id="passMsg" class="msg"></span>
+			</div>
+
+			<div class="line" id="">
+				<span class="row1">관심사</span>
+				<span class="row2">
+					<label>
+						<input type="checkbox" id="userIntr1" name="userIntr" value="M" class="intr"/> <span class="rTxt">돈</span>
+					</label>
+					<label>
+						<input type="checkbox" id="userIntr2" name="userIntr" value="M" class="intr"/> <span class="rTxt">명예</span>
+					</label>
+					<label>
+						<input type="checkbox" id="userIntr3" name="userIntr" value="M" class="intr"/> <span class="rTxt">코딩</span>
+					</label>
+				</span>
+				<span id="passMsg" class="msg"></span>
+			</div>
+			
+			<div class="line">
+				<span class="row1"></span>
+				<span class="row2">
+					<select id="selectIntr" name="selectIntr" class="selectIntr">
+						<option>선택하세요</option>
+					</select>
+				</span>
+				<span id="nameMsg" class="msg"></span>
+			</div>
+		
+			
+			<div style="height:30px;"></div>
+
+			<div class="line">
+				<span class="row1">휴대전화</span>
+				<span class="row2" style="width:250px; float:left;">
+					<input type="text" name="userPhone" id="userPhone" class="textbox1" style="width:245px;"/>
+				</span>
+				<a href="#" class="btn">
+					인증번호 받기
+				</a>
+				<span id="nameMsg" class="msg"></span>
+			</div>
+
+			<div class="empty" style="clear:both;"></div>
+
+			<div style="clear:both;" class="line">
+				
+				<a href="#" class="btn" style="width:400px;">
+					가입하기
+				</a>
+				
+			</div>
+		</form>
+	</div>
+ </body>
+</html>

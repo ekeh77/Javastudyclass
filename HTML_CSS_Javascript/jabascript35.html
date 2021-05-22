@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	//내장함수
+	function chk_jumin(){
+		var obj = document.getElementById("jumin1")
+		var obj2 = document.getElementById("jumin2")
+
+		if(obj.value.length >=6){
+			obj2.focus();
+		}
+	}
+  </script>
+ </head>
+ <body>
+	<input type="text" id="jumin1" maxlength="6" onkeyup="chk_jumin();"/>
+	<input type="text" id="jumin2" maxlength="7"/>
+ </body>
+</html>

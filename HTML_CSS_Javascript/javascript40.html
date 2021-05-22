@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+  	#rec{
+		width: 200px;
+		height: 200px;
+		border: 1px solid black;
+	}
+	span{
+		display:block;
+		width:50px;
+		height:50px;
+		border:1px solid #dddddd;
+		float:left;
+	}
+  </style>
+  <script>
+  	function getId(ID){
+		var get = document.getElementById(ID);
+		return get
+	}
+	function chg_color(color){
+		var div = getId("rec");
+		div.style = "background-color:" + color;
+	}
+  </script>
+ </head>
+ <body>
+	<div id="rec">
+
+	</div>
+	<div>
+		<span id="color1" name="yellow" style="background-color:yellow;" onclick="chg_color('yellow');"></span>
+		<span id="color2" style="background-color:red;" onclick="chg_color('red');"></span>
+		<span id="color3" style="background-color:blue" onclick="chg_color('blue');"></span>
+		<span id="color4" style="background-color:orange;" onclick="chg_color('orange');"></span>
+	</div>
+ </body>
+</html>

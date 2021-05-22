@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	var test2 = function(){
+		var obj = document.getElementById("sel");
+		var val = obj.value;
+		alert(val)
+	}
+	var test3 = function(){
+		var obj = document.getElementById("g1");
+	}
+  </script>
+ </head>
+ <body>
+
+	<select id="sel" onchange="test2();">
+		<option value="a">1</option>
+		<option value="b">2</option>
+		<option value="c">3</option>
+	</select>
+	
+	<div>
+		<input type="radio" name="gender" value="M" id="g1" onchange="test3();"/>남자
+		<input type="radio" name="gender" value="F" id="g2" onchange=""/>남자
+	</div>
+ </body>
+</html>

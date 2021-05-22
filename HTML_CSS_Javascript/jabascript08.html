@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <script>
+ 	function showGuGuDan(){
+		var num = document.getElementById("num").value;
+
+		var result = 0;
+		for(var i = 1; i<=9; i++){
+
+			result = num * i;
+			document.write(num + " X " + i + " = " + result +"<br/>" );
+		}
+	}
+ </script>
+ <body>
+  <div>니가 원하는 구구단 단수 ???</div>
+  <div>
+  	<input type="text" name="num" id="num" />
+	<input type="button" value="확인" onclick="showGuGuDan()" />
+  </div>
+ </body>
+</html>

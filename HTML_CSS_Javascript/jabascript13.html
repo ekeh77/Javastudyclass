@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+  	.line{
+		width: 500px;
+		height: 100px;
+		border: 1px solid #444444;
+	}
+	.line2{
+		display: block;
+		width: 248px;
+		height: 100px;
+		border: 1px dotted red;
+		float: left;
+	}
+	.line3{
+		display: block;
+		width: 248px;
+		height: 100px;
+		border: 3px dotted yellow;
+		float: left;
+		background-color: violet;
+	}
+	.btn{
+		width: 70px;
+		border: 1px solid #999999;
+		background-color: #dedede;
+		border-radius: 10px;
+		font-size: 12px;
+		text-align:center;
+		padding: 5px 0px 5px 0px;
+	}
+  </style>
+  <script>
+	function show_msg(){
+		var strHTML = "";
+
+		var strValue1 = "안녕";
+		var strValue2 = "잘가";
+		var strClass = "line3";
+
+		strHTML += "<span class='" + strClass + "'>" + strValue1 + "</span>";
+		strHTML += "<span class='" + strClass + "'>" + strValue2 + "</span>";
+
+		document.getElementById("rst").innerHTML = strHTML;
+	}
+  </script>
+ </head>
+ <body>
+  <div id="rst" class="line">
+  <!--
+  	<span class='line2'>1</span>
+	<span class='line2'>2</span>
+	-->
+  </div>
+  <div class="btn" onclick="show_msg();">
+  	확인
+  </div>
+ </body>
+</html>

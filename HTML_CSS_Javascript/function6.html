@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  
+  <style>
+	.row{
+		clear:left;
+	}
+
+	.col{
+		display: block;
+		width: 120px;
+		border: 1px solid #bbb;
+		background-color: #dedede;
+		font-size: 16px;
+		padding: 12px 0px 12px 0px;
+		float: left;
+		text-align: center;
+	}
+  </style>
+  
+  <script>
+	
+	var init = function(){
+		
+		var foods = getDatas();
+		var spanHTML = setSpan(foods);
+		printHTML(spanHTML,"menus");
+	}
+
+	var getDatas = function(){
+
+		var foods = [];
+
+		foods[0] = "갈비탕";
+		foods[1] = "햄버거";
+		foods[2] = "국밥";
+
+		return foods;
+	}
+
+	var setSpan = function(datas){
+
+		var strHTML = "";
+
+		for (var i=0; i<datas.length; i++)
+		{
+			strHTML += "<span class='col'>" + datas[i] + "</span>"
+		}
+
+		return strHTML
+	}
+
+	var printHTML = function(strHTML, pID){
+		document.getElementById(pID).innerHTML = strHTML;
+	}
+
+  </script>
+
+ </head>
+ <body onload="init();">
+	<div id="menus" class="row">
+		<!--
+		<span class="col">갈비탕</span>
+		<span class="col">햄버거</span>
+		<span class="col">국밥</span>
+		-->
+	</div>
+ </body>
+</html>

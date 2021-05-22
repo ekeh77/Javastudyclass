@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+	<script>
+	/*
+		var result = 0;
+		var shape = "";
+		for(var i=1; i<=10; i++){
+			
+			result = result + i;
+			shape = shape + i + " + ";
+		}
+		document.write(shape);
+		*/
+		/*
+		var dan = 7;
+		var result = 0;
+		var shape = "";
+
+		for (var i=1; i<10; i++)
+		{
+			result = dan * i;
+
+			shape = dan + " x " + i + " = " + result;
+			document.write(shape + "<br/>")
+		}
+		*/
+		var result = 0;
+		var shape ="";
+		for (var i=2; i<=9; i++)
+		{
+			for (var j=1; j<=9; j++)
+			{
+				result = i * j;
+				shape = i + " x " + j + " = " + result
+
+				document.write(shape + "<br/>")
+			}
+			document.write("-----------------------------" + "<br/>")
+		}
+		
+	</script>
+ </head>
+
+ <body>
+
+ </body>
+</html>

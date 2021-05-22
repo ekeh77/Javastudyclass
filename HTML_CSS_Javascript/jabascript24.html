@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+  	function a(){
+		var obj = document.getElementById("test");
+
+		const obj2 = obj;
+		
+		obj.value = "3333";
+		
+		var obj3 = document.getElementById("test2");
+		
+		obj3.value = obj2.value;
+	}
+  </script>
+ </head>
+ <body onload="a();">
+	<input type="text" id="test" value="11" />
+	<input type="text" id="test2" value="22" />
+	<input type="button" value="확인" />
+ </body>
+</html>

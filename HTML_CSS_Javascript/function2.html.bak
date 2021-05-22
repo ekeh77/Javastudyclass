@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+
+	<script>
+		function init(){
+			var obj = document.getElementById("btn");
+			obj.onclick = test();
+		}
+
+		var test = function(){
+			alert();
+		}
+	</script>
+
+ </head>
+ <body onload="init();">
+	<div id="msg">
+		
+	</div>
+	<input type="button" value="확인" id="btn"/>
+ </body>
+</html>

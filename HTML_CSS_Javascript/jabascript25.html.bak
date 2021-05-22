@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+  	#show{
+		background-color: yellow;
+	}
+  </style>
+  <script>
+  	function a(){
+		var obj = document.getElementById("show");
+		obj.style: ="width:300px; height:300px;";
+	}
+  </script>
+ </head>
+ <body>
+	<div id="show" style="border:1px solid orange;">
+		<font size="5" color="blue" id="text1">123</font>
+		<br/>
+		<font size="7" color="red" id="text2">456</font>
+	</div>
+	<div>
+		<input type="button" value="확인" onclick="a();" />
+	</div>
+ </body>
+</html>

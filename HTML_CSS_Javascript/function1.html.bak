@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	/*
+	function test(num1, num2){
+		var result = num1 + num2;
+		return result;
+	}
+	
+	var test = function(num1, num2){
+		var result = num1 + num2;
+		return result;
+	}
+	
+	document.write(test(5,4))
+	*/
+
+	function test(){
+		var obj = document.getElementById("msg")
+		obj.innerHTML = "asdfasfd"
+	}
+  </script>
+ </head>
+ <body>
+	<div id="msg">
+		
+	</div>
+	<input type="button" value="확인" onclick="test();" />
+ </body>
+</html>

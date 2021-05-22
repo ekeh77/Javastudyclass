@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+	<input type="checkbox" id="hobby1" name="hobby" value="s" />자기
+	<input type="checkbox" id="hobby2" name="hobby" value="e" />먹기
+	<input type="checkbox" id="hobby3" name="hobby" value="p" />놀기
+ </body>
+</html>

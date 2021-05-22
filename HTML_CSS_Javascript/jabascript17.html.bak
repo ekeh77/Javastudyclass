@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+
+  <script>
+
+  	var numbers = [];
+
+	numbers[0] = 12;
+	numbers[1] = 14;
+	numbers[2] = 45;
+	numbers[3] = 23;
+	numbers[4] = 19;
+	numbers[5] = 34;
+	numbers[6] = 22;
+	numbers[7] = 67;
+	numbers[8] = 11;
+	numbers[9] = 10;
+
+	//10보다 큰 숫자 찾자
+
+	for (i=0; i<numbers.length; i++)
+	{
+		if(numbers[i] > 10){
+			document.write(numbers[i] + "</br>");			
+		}
+	}
+
+  </script>
+
+ </head>
+ <body>
+  
+ </body>
+</html>

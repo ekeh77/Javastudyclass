@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+  	#msg{
+		width:200px;
+		height:100px;
+		border:1px solid blue;
+	}
+  </style>
+  <script>
+	function show_msg(){
+		
+		var strName = "전우치";
+
+		var varWidth = "300px";
+
+		var varAlign = "left";
+
+		var strHTML = "";
+
+		strHTML += "<table border='1' width='"
+		strHTML += varWidth
+		strHTML += "' align='center'>";
+		strHTML += "	<tr>";
+		strHTML += "		<td width='80' heigth='30' align='"
+		strHTML +=				varAlign
+		strHTML +=			"center'>";
+		strHTML += "			이름";
+		strHTML += "		</td>";
+		strHTML += "		<td width='70' heigth='30' align='center'>";
+		strHTML +=				strName;
+		strHTML += "		</td>";
+		strHTML += "	</tr>";
+		strHTML += "</table>";
+
+		document.getElementById("msg").innerHTML =strHTML;
+	}
+  </script>
+ </head>
+ <body>
+	<div id="msg">
+	<!--
+		<table border='1' width='150px' align='center'>
+			<tr>
+				<td width='80' heigth='30' align='center'>
+					이름
+				</td>
+				<td width='70' heigth='30' align='center'>
+					홍길동
+				</td>
+			</tr>
+		</table>
+		-->
+	</div>
+	<div>
+		<input type="button"value="확인" onclick="show_msg();"/>
+	</div>
+ </body>
+</html>

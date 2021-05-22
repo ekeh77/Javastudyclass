@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+  	function chkAge(){
+
+		var yourAge = document.getElementById("age").value;
+		var mesege;
+
+		if (yourAge >= 20 && yourAge < 100){
+			mesege = "성인이네요";
+		}
+		else if (yourAge < 20 && yourAge >= 1)
+		{
+			mesege = "까불래";
+		}
+		else if (yourAge >= 100)
+		{
+			mesege = "WoW";
+		}
+		else{
+			mesege = "올바른 숫자를 입력하세요";
+		}
+
+		alert(mesege);
+	}
+  </script>
+ </head>
+ <body>
+ 	<div>당신의 나이는 몇살입니까?</div>
+	<input type="text" name="age" id="age"/>
+	<input type="button" value="확인" onclick="chkAge()"/>
+ </body>
+</html>

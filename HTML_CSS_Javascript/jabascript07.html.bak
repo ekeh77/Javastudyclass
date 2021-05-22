@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <script>
+ 	var i = 1;
+	var result = 0;
+	var result2 = 0;
+	for(i; i<30; i+=3){
+		result += i;
+	}
+	for(i; i<=30; i++){
+		if(i%3 == 1){
+			console.log(i)
+			result2 += i;
+		}
+	}
+	document.write(result2);
+ </script>
+ <body>
+  
+ </body>
+</html>

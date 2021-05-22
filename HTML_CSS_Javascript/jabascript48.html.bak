@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	function checkFind(obj){
+		var checkName = document.getElementsByName("hobby")
+		var chkNum = 0;
+		for (var i=0; i<checkName.length; i++)
+		{
+			if(obj != checkName[i]){
+				checkName[i].checked = false
+				}
+		}
+	}
+	function chg(){
+		var selectG = document.getElementById("hi");
+		var boxName = document.getElementsByName("hobby");
+		for	(var i=0; i<boxName.length; i++){
+			if (i == selectG.value)
+			{
+				boxName[i].checked = true;
+			}
+		}
+		checkFind(obj);
+	}
+  </script>
+ </head>
+ <body>
+	<div>
+		<select id="hi" onchange="chg();">
+			<option value="0">먹기</option>
+			<option value="1">자기</option>
+			<option value="2">놀기</option>
+		</select>
+	</div>	
+	<div>
+		<input type="checkbox" id="hobby1" name="hobby" value="s" onchange="checkFind(this);"/>먹기
+		<input type="checkbox" id="hobby2" name="hobby" value="e" onchange="checkFind(this);"/>자기
+		<input type="checkbox" id="hobby3" name="hobby" value="p" onchange="checkFind(this);"/>놀기
+	</div>
+ </body>
+</html>

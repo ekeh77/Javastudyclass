@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+<script>
+	console.log("hi")
+	/*
+	var result = 0 ;
+	for(var i = 1; i <= 10; i++){
+		result = result + i;
+	}
+	*/
+	var result_even = 0;
+	var result_odd = 0;
+	for(var i = 1; i<=100; i++){
+		
+		if( i%2 == 1){
+			console.log(i)
+			result_odd += i;
+		}
+		else{
+			result_even += i;
+		}
+	}
+	document.write(result_even);
+</script>
+ </head>
+ <body>
+  
+ </body>
+</html>

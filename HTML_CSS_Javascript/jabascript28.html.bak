@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	div{
+		border:1px solid blue;
+		width: 300px;
+		height: 100px;
+		}
+  </style>
+  <script>
+	function chg_object(){
+		var obj1 = document.getElementById("a");
+		var obj2 = document.getElementById("b");
+		obj1.innerHTML = "<font color='red'>안녕하세요</font>";
+		obj2.innerHTML = "<font color='blue'>어서오세요</font>";
+	}
+	function chg_ByTagName(){
+		var arrObjs = document.getElementByTagName("div");
+		arrObjs[0].innerHTML = "<font color='red'>안녕하세요</font>";
+		arrObjs[1].innerHTML = "<font color='blue'>어서오세요</font>";
+	}
+  </script>
+ </head>
+ <body>
+	<div id="a">1</div>
+	<div id="b">2</div>
+	<div>
+		<input type="button" value="확인" onclick="chg_object();">
+		<input type="button" value="확인2" onclick="chg_ByTagName();">
+	</div>
+ </body>
+</html>

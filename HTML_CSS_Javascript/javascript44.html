@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+  	/*
+	function getObjectById(objID)
+	{
+		var obj = document.getElementById(objID);	
+		return obj;
+	}
+	function getObjectsByTagName(objTagName)
+	{
+		var objs = document.getElementsByTagName(objTagName);
+		return objs;
+	}
+	function getObjectsByName(objName)
+	{
+		var objs = document.getElementsByName(objName);
+		return objs;
+	}
+	*/
+	function getObject(gbn, objectValue)
+	{
+		var returnObj = null;
+		if(gbn == "ID")
+		{
+			returnObj = document.getElementById(objectValue);
+		}
+		else if(gbn == "TagName")
+		{
+			returnObj = document.getElementsByTagName(objectValue);
+		}
+		else if(gbn == "Name")
+		{
+			returnObj = document.getElementsByName(objectValue);
+		}
+		return returnObj
+	}
+  </script>
+ </head>
+ <body>
+  <input type="text" id="userID" name="userID"/>
+  <input type="text" id="userID" name="userID"/>
+  <input type="text" id="userID" name="userID"/>
+  <input type="button" value="확인">
+ </body>
+</html>
