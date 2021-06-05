@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+   <link rel="stylesheet" href="./css/rec.css"/>
+  <script>
+	//자바스크립트의 class
+	var Student = function(num, name, tel, addr){
+		
+		this.Num = num;
+		this.Name = name;
+		this.Tel = tel;
+		this.Addr = addr;
+
+		this.print = function(){
+
+			var strHTML= "";
+			strHTML += "<div class='row'>"
+			strHTML += "<span class='col'>" + this.Num + "</span>";
+			strHTML += "<span class='col'>" + this.Name + "</span>";
+			strHTML += "<span class='col'>" + this.Tel + "</span>";
+			strHTML += "<span class='col'>" + this.Addr + "</span>";
+			strHTML += "</div>"
+
+			return strHTML;
+		}
+	}
+	
+	var init = function(){
+		/*
+		var studnet1 = new Student(1, "이지완", "01087150880", "부산");
+		var strHTML1 = studnet1.print();
+		document.getElementById("container").innerHTML += strHTML1;
+
+		var studnet2 = new Student(2, "최정은", "00000000000", "술집");
+		var strHTML2 = studnet2.print();
+		document.getElementById("container").innerHTML += strHTML2;
+		*/
+		var students = [];
+
+		students[0] = new Student(1, "이지완", "01087150880", "부산");
+		
+		students[1] = new Student(2, "김돌쇠", "11111111111", "서울");
+		
+		students[2] = new Student(3, "박김소", "22222222222", "울산");
+		
+		for (var i=0; i<students.length; i++)
+		{
+			document.getElementById("container").innerHTML += studnets[i].print();
+		}
+
+
+	}
+	
+
+  </script>
+ </head>
+ <body onload="init();">
+ 	<div id="container">
+		<div id="show" class="row">
+		<!--
+			<span class="col">1</span>
+			<span class="col">이지완</span>
+			<span class="col">01087150880</span>
+			<span class="col">부산</span>
+			-->
+		</div>
+	</div>
+ </body>
+</html>

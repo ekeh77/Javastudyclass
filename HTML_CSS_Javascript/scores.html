@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  	<style>
+		.row{
+			width: 816px;
+			height: 40px;
+			/*border:1px solid #cccccc;*/
+		}
+		.row .col{
+			display: block;
+			width: 100px;
+			font-size: 14px;
+			color:#444444;
+			padding:10px 0px 10px 0px;
+			border:1px solid #cccccc;
+			float:left;
+			text-align: center;
+		}
+	</style>
+  	<script>
+		var init  = function(){
+			var students = [];
+			var kors = [];
+			var maths = [];
+			var scis = [];
+			var engs = [];
+
+			//0. 홍길동
+			students[0] = "홍길동"
+			kors[0] = 78;
+			maths[0] = 88;
+			scis[0] = 45;
+			engs[0] = 77;
+			
+			//1. 전우치
+			students[1] = "전우치"
+			kors[1] = 90;
+			maths[1] = 90;
+			scis[1] = 90;
+			engs[1] = 90;
+			
+			//2. 김백만
+			students[2] = "김백만"
+			kors[2] = 85;
+			maths[2] = 85;
+			scis[2] = 85;
+			engs[2] = 85;
+
+			makeResult(students, kors, maths, scis, engs);//지역변수를 다른 함수로 던져준다
+        }
+		//평균과 총점을 계산하고 반복하는 함수
+		var makeResult = function(students, kors, maths, scis, engs){
+			//반복문으로 결과를 만든다
+			var strHTML = "";
+			var totalScore = 0;
+			var avgScore = 0;
+			for(var i=0; i<students.length; i++){
+				
+				totalScore = kors[i] + maths[i] + scis[i] + engs[i];
+				avgScore = totalScore / 4;
+
+				strHTML += "<div class='row'>";
+				strHTML += "<span class='col'>" + (i + 1) + "</span>"
+				strHTML += "<span class='col'>" + students[i] + "</span>"
+				strHTML += "<span class='col'>" + kors[i] + "</span>"
+				strHTML += "<span class='col'>" + maths[i] + "</span>"
+				strHTML += "<span class='col'>" + scis[i] + "</span>"
+				strHTML += "<span class='col'>" + engs[i] + "</span>"
+				strHTML += "<span class='col'>" + totalScore + "</span>"
+				strHTML += "<span class='col'>" + avgScore + "</span>"
+
+			}
+
+			var obj = document.getElementById("score");
+			obj.innerHTML = strHTML
+		}
+	</script>
+ </head>
+ <body onload="init();">
+	 <div>
+		<div class= "row">
+			<span class="col">번호</span>
+			<span class="col">이름</span>
+			<span class="col">국어</span>
+			<span class="col">수학</span>
+			<span class="col">영어</span>
+			<span class="col">과학</span>
+			<span class="col">총점</span>
+			<span class="col">평균</span>
+		</div>
+		
+		<!-- 여기서부터 반복 시작-->
+		<div id="score">
+		</div>
+		<!-- 여기서부터 반복 끝-->
+	</div>
+ </body>
+</html>

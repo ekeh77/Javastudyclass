@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+	var students = [
+		{name:"홍길동",gender:"M"},
+		{name:"전우치",gender:"M"},
+		{name:"백설공주",gender:"F"},
+		{name:"신데렐라",gender:"F"},
+	]
+	var makeSelect = function(){
+		//1. 사용자가 어떤 radio button을 클릭했는지 찾아야죠
+		var chkValue = $("input[name='gender']:checked").val();
+		var strHTML = "";
+		if(chkValue == "M"){
+			 //남자인경우
+			strHTML += "<select>"
+			for(var i=0; i<students.length; i++)
+			{
+				if(students[i].gender == "M")
+				strHTML += "<option>"
+				strHTML += students[i].name
+				strHTML += "</option>"
+
+			}
+			strHTML += "</select>"
+		}
+		else{
+			//여자인경우
+			strHTML += "<select>"
+			for(var i=0; i<students.length; i++)
+			{
+				if(students[i].gender == "F")
+				strHTML += "<option>"
+				strHTML += students[i].name
+				strHTML += "</option>"
+
+			}
+			strHTML += "</select>"
+		}
+
+		$("#result").html(strHTML);
+	}
+
+	var makeSelect2 = function(){
+		//1. 사용자가 어떤 radio button을 클릭했는지 찾아야죠
+		var chkValue = $("input[name='gender']:checked").val();
+		var strHTML = "";
+			 //남자인경우
+			strHTML += "<select>"
+			for(var i=0; i<students.length; i++)
+			{
+				if(students[i].gender == chkValue)
+				strHTML += "<option>"
+				strHTML += students[i].name
+				strHTML += "</option>"
+
+			}
+			strHTML += "</select>"
+			
+			$("#result").html(strHTML);
+		}
+	
+  </script>
+ </head>
+ <body>
+	<div>
+		<input type="radio" name="gender" value="M" onclick="makeSelect2();"/>남자
+		<input type="radio" name="gender" value="F" onclick="makeSelect2();"/>여자
+	</div>
+	<div id="result">
+		
+	</div>
+ </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>website</title>
+  <style>
+	a{
+		color: #eeeeee;
+		text-decoration: none;
+	}
+  	#container {
+		display: flex;
+		justify-content: space-between;
+		font-size: 28px;
+		background-color: #3333cc;
+		padding: 10px;
+		color: #eeeeee;
+	}
+	.introduce{
+		background-color: #3333cc;
+		border: 2px solid #eeeeee;
+		display: flex;
+		justify-content: space-around;
+		padding: 5px;
+		color: #999999;
+	}
+	.introduce div{
+		padding: 5px;
+	}
+	.introduce div:hover{
+		border: 1px solid #eeeeee;
+		border-radius: 5px;
+	}
+	.allDiv{
+		display: flex;
+		flex-direction: column;
+	}
+	.imgDiv{
+		display: flex;
+		justify-content: center;
+		background-color: #000000;
+		margin: 5px 0px;
+		border: 1px solid black;
+		border-radius: 10px;
+	}
+	.imgDiv img{
+		width: 1200px;
+		height: 300px;
+	}
+	.div{
+		background-color: #3333cc;
+		height: 3px;
+		margin: 2px;
+	}
+	.contentDiv{
+		display: flex;
+		align-items: center;
+		position: relative;
+		margin: 10px 0px;
+		height: 100px;
+	}
+	.contentDiv img{
+		width: 100px;
+		height: 100px;
+		border-radius: 10px;
+	}
+	.content span{
+		position: absolute;
+		bottom: 15px;
+		left: 50px;
+		font-size: 12px;
+		color: #eeeeee;
+		border: 1px solid #eeeeee; 
+		border-radius: 5px;
+		padding: 4px;
+	}
+	.content span:hover{
+		background-color: #eeeeee;
+		color: #3333cc;
+	}
+	.content{
+		margin-right: 10px;
+	}
+	.text{
+		border:1px solid black;
+		border-radius: 5px;
+		padding: 4px;
+		height: 100px;
+	}
+	.bottom{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #3333cc;
+		color: #eeeeee;
+		padding: 10px;
+	}
+  </style>
+  <script src="https://kit.fontawesome.com/1a2d02a7f1.js" crossorigin="anonymous"></script>
+ </head>
+ <body>
+	 <div class="allDiv">
+		<div id="container">
+			<div class="logoDiv"><i class="fab fa-accusoft"></i></div>
+			<div class="siteName">Welcome my website</div>
+			<div class="barDiv"><a href="#"><i class="fas fa-bars"></i></a></div>
+		</div>
+		<div class="div"></div>
+		<div class="imgDiv"><img src="./img/logo.jpg" /></div>
+		<div class="introduce">
+			<div><a href="#">Menu1</a></div>
+			<div><a href="#">Menu2</a></div>
+			<div><a href="#">Menu3</a></div>
+			<div><a href="#">Menu4</a></div>
+		</div>
+		<div class="div"></div>
+		<div class="contentDiv">
+			<div class="content">
+				<img src="./img/content01.jpg" />
+				<span>♥ 674</span>
+			</div>
+			<div class="text">
+				<span>There was Frank Sinatra, hanging on the ring apron as a photographer for Life Magazine; and writer Norman Mailer putting words to the action. Singers and actors -- Barbra Streisand, Dustin Hoffman and Sammy Davis Jr -- sprinkled stardust over the proceedings.</span>
+			</div>
+		</div>
+		<div class="contentDiv">
+			<div class="content">
+				<img src="./img/content02.jpg" />
+				<span>♥ 329</span>
+			</div>
+			<div class="text">
+				<span>"I know first hand the sexism and racism institutions and the media use to vilify women and people of color to minimize us, to break us down and demonize us. We must recognize our obligation to decry malicious, unfounded gossip and tabloid journalism. The mental health consequences of systemic oppression and victimization are devastating, isolating and all too often lethal."</span>
+			</div>
+		</div>
+		<div class="div"></div>
+		<div class="bottom">
+			<div>
+				2021-03-08
+			</div>
+			<div>
+				&copy; website
+			</div>
+			<div>
+				<i class="fab fa-facebook"></i>
+				<i class="fab fa-twitter"></i>
+				<i class="fab fa-twitch"></i>
+			<div>
+		</div>
+	</div>
+ </body>
+</html>

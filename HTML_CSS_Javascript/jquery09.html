@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+ 
+	$(document).ready(
+		function(){
+			$("#msg").html("당신의 직책을 선택하세요");
+			$("input[name='position']").on("click",
+				function(){
+					$("#msg").html(this.value + "을 선택하셨습니다");
+					$("input[name='position']").prop("checked",false);
+					this.checked = true;
+				}
+			)
+		}
+	);
+	
+  </script>
+ </head>
+ <body>
+ 	<div>
+		<span id="msg"><span>
+	</div>
+	<div>
+		<input type="checkbox" name="position" value="부장"/>부장
+		<input type="checkbox" name="position" value="차장"/>차장
+		<input type="checkbox" name="position" value="과장"/>과장
+	</div>
+ </body>
+</html>

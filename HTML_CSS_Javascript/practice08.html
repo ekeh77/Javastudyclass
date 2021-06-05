@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>menu만들기이</title>
+  <style>
+	.menu{
+		width: 100px;
+		height: 25px;
+		border:1px solid #cdcdcd;
+		padding: 25px 0px;
+		text-align:center;
+		float:left;
+		cursor: pointer;
+		transition:transform 1s ease-in-out 0s;
+	}
+	.menu:hover{
+		background-color: orange;
+	}
+	.animation{
+		position: absolute;
+		border:1px solid #cdcdcd;
+		height: 25px;
+		width: 100px;
+		animation:goDown 0.3s ease-in-out;
+		animation-fill-mode: forwards;
+
+		
+	}
+	@keyframes goDown{
+		0%{
+			transform: translateY(0px);
+		}
+		100%{
+			transform: translateY(75px);
+		}
+	}
+	.animation:hover{
+		background-color: #ffffff;
+	}
+	.content{
+		display:none;
+	}
+	.content1{
+		top:10px;
+	}
+	.content2{
+		top:37px;
+	}
+	.content3{
+		top:64px;
+	}
+	.content4{
+		top:91px;
+	}
+	.content5{
+		top:118px;
+	}
+	.content6{
+		top:145px;
+	}
+	.base1{
+		left: 8px;
+		background-color: yellow;
+	}
+	.base2{
+		left: 110px;
+		background-color: blue;
+	}
+	.base3{
+		left: 212px;
+		background-color: violet;
+	}
+	.base4{
+		left: 315px;
+		background-color: red;
+	}
+	.base5{
+		left: 415px;
+		background-color: green;
+	}
+  </style>
+  <script>
+	var showMenu = function(obj){
+		var menuName = document.getElementsByName("menu");
+
+		var contentName1 = document.getElementsByName("content1");
+		var contentName2 = document.getElementsByName("content2");
+		var contentName3 = document.getElementsByName("content3");
+		var contentName4 = document.getElementsByName("content4");
+		var contentName5 = document.getElementsByName("content5");
+
+		for (var i = 0; i<menuName.length; i++)
+		{
+			if(menuName[0] == obj){
+				for (var j=0; j<contentName1.length; j++)
+				{
+					contentName1[j].classList.toggle("content");
+					contentName1[j].classList.toggle("animation");
+				}
+			}
+			else if(menuName[1] == obj){
+				for (var j=0; j<contentName2.length; j++)
+				{
+					contentName2[j].classList.toggle("content");
+					contentName2[j].classList.toggle("animation");
+				}
+			}
+			else if(menuName[2] == obj){
+				for (var j=0; j<contentName3.length; j++)
+				{
+					contentName3[j].classList.toggle("content");
+					contentName3[j].classList.toggle("animation");
+				}
+			}
+			else if(menuName[3] == obj){
+				for (var j=0; j<contentName4.length; j++)
+				{
+					contentName4[j].classList.toggle("content");
+					contentName4[j].classList.toggle("animation");
+				}
+			}
+			else if(menuName[4] == obj){
+				for (var j=0; j<contentName5.length; j++)
+				{
+					contentName5[j].classList.toggle("content");
+					contentName5[j].classList.toggle("animation");
+				}
+			}
+		}
+	}
+  </script>
+ </head>
+ <body>
+	<div id="container">
+		<div id="menu1" name="menu" class="menu" onclick="showMenu(this);">
+			<span>메뉴1</span>
+			<span name="content1" class="content1 content base1">content1</span>
+			<span name="content1" class="content2 content base1">content2</span>
+			<span name="content1" class="content3 content base1">content3</span>
+			<span name="content1" class="content4 content base1">content4</span>
+		</div>
+		<div id="menu2" name="menu" class="menu" onclick="showMenu(this);">
+			<span>메뉴2</span>
+			<span name="content2" class="content1 content base2">content1</span>
+			<span name="content2" class="content2 content base2">content2</span>
+			<span name="content2" class="content3 content base2">content3</span>
+			<span name="content2" class="content4 content base2">content4</span>
+			<span name="content2" class="content5 content base2">content5</span>
+		</div>
+		<div id="menu3" name="menu" class="menu" onclick="showMenu(this);">
+			<span>메뉴3</span>
+			<span name="content3" class="content1 content base3">content1</span>
+			<span name="content3" class="content2 content base3">content2</span>
+			<span name="content3" class="content3 content base3">content3</span>
+		</div>
+		<div id="menu4" name="menu" class="menu" onclick="showMenu(this);">
+			<span>메뉴4</span>
+			<span name="content4" class="content1 content base4">content1</span>
+			<span name="content4" class="content2 content base4">content2</span>
+			<span name="content4" class="content3 content base4">content3</span>
+			<span name="content4" class="content4 content base4">content4</span>
+		</div>
+		<div id="menu5" name="menu" class="menu" onclick="showMenu(this);">
+			<span>메뉴5</span>
+			<span name="content5" class="content1 content base5">content1</span>
+			<span name="content5" class="content2 content base5">content2</span>
+			<span name="content5" class="content3 content base5">content3</span>
+			<span name="content5" class="content4 content base5">content4</span>
+			<span name="content5" class="content5 content base5">content5</span>
+			<span name="content5" class="content6 content base5">content6</span>
+		</div>
+	</div>
+ </body>
+</html>

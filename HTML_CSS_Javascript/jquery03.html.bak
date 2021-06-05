@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+
+	var chkValue = function(){
+		
+		var checkedVal = $("input[name='gender']").eq(0).prop("checked");
+		alert(checkedVal);
+		
+	};
+
+  </script>
+ </head>
+ <body>
+	<div>
+		<input type="radio" name="gender" value="M" id="male"/>남자
+		<input type="radio" name="gender" value="F" id="female"/>여자
+	</div>
+	<div>
+		<input type="button" value="확인" onclick="chkValue();"/>
+	</div>
+ </body>
+</html>

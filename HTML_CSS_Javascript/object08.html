@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	
+	var member = function(name, age){
+
+		this.Name = name;
+		this.Age = age;
+	}
+
+	var init = function(){
+
+		//1.데이터를 받아오자
+		var members = setDatas();
+
+		//2.출력을 하자
+		txtPrint(members);
+	}
+
+	var setDatas = function(){
+
+		var members = [];
+
+		members[0] = new member("홍길동",33);
+		members[1] = new member("전우치",43);
+		members[2] = new member("전우치",43);
+		members[3] = new member("전우치",43);
+
+		return members;
+
+	}
+	
+	var txtPrint = function(members){
+
+		for(var i = 0; i<members.length; i++){
+			document.write(members[i].Name + " : " + members[i].Age + "<br/>");
+		}
+	}
+
+  </script>
+ </head>
+ <body onload="init();">
+	<div id="container">
+
+	</div>
+ </body>
+</html>

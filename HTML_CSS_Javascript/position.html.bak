@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+  	.rec{
+		position:relative;
+		border:3px solid blue;
+		background-color: yellow;
+		width:300px;
+		height:300px;
+	}
+	.rec1{
+		position:relative;
+		border:3px solid blue;
+		background-color: red;
+		width:300px;
+		height:300px;
+	}
+  </style>
+  <script>
+	var displayRec = function(num){
+		var obj = document.getElementById("rec");
+		if(num == 1){
+		obj.style = "visibility: hidden";
+		}
+		else{
+		obj.style = "visibility: visible;";
+		}
+	}
+  </script>
+ </head>
+ <body>
+ 	<div>
+		<button onclick="displayRec(1);">사라져라</button>
+		<button onclick="displayRec(2);">보여라</button>
+	</div>
+	<div class="rec">
+
+	</div>
+	<div class="rec1">
+
+	</div>
+ </body>
+</html>

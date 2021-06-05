@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  	<style>
+		.textBox{
+			width: 400px;
+			height: 40px;
+			border: 1px solid #dddddd
+		}
+		.textBox > input{
+			width: 350px;
+			display:block;
+			margin-top: 10px;
+			float:left;
+			border-style: none;
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+		.textBox > span{
+			display:block;
+			float:left;
+			margin-top: 10px;
+		}
+	</style>
+ </head>
+ <body>
+	 <form>
+		<div class="divPart">
+			<span>아이디</span>
+			<div class="textBox">
+				<input type="text" style="width:280px;"/>
+				<span>@naver.com<span>
+			</div>
+			<span></span>
+		</div>
+
+		<div>
+			<span>비밀번호</span>
+			<div class="textBox">
+				<input type="text" />
+				<span>img<span>
+			</div>
+			<span></span>
+		</div>
+
+		<div>
+			<span>비밀번호 재확인</span>
+			<div class="textBox">
+				<input type="text" />
+				<span>img<span>
+			</div>
+			<span></span>
+		</div>
+
+		<div>
+			<span>이름</span>
+			<div class="textBox">
+				<input type="text" />
+			</div>
+			<span></span>
+		</div>
+
+		<div>
+			<span>생년월일</span>
+			<div>
+				<input type="text" />
+			</div>
+			<div>
+				<select>
+					<option>월</option>
+				</select>
+			</div>
+			<div>
+				<input type="text" />
+			</div>
+			<span></span>
+		</div>
+		
+		<div>
+			<span>성별</span>
+			<div class="textBox">
+				<select>
+					<option>성별</option>
+				</select>
+			</div>
+			<span></span>
+		</div>
+
+		<div>
+			<span>본인 확인 이메일</span>
+			<span>(선택)</span>
+			<div class="textBox">
+				<input type="text" />
+			</div>
+			<span></span>
+		</div>
+
+		<div>
+			<span>휴대전화</span>
+			<div>
+				<select>
+					<option>대한민국 +82</option>
+				</select>
+			</div>
+			<div>
+				<input type="text" />
+			</div>
+			<div>
+				인증번호받기
+			</div>
+			<div class="textBox">
+				<input type="text" />
+			</div>
+			<span></span>
+		</div>
+
+		<div>가입하기</div>
+	</form>
+ </body>
+</html>

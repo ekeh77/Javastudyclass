@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+  	var rounds = [];
+	var lottary1 = [];
+	var lottary2 = [];
+	var lottary3 = [];
+	var lottary4 = [];
+	var lottary5 = [];
+	var lottary6 = [];
+
+	var init = function(){
+		
+		
+		//로또 1회차 데이터
+		rounds[0] = "1회차";
+		lottary1[0] = 8;
+		lottary2[0] = 15;
+		lottary3[0] = 22;
+		lottary4[0] = 33;
+		lottary5[0] = 35;
+		lottary6[0] = 41;
+
+		//로또 2회차 데이터
+		rounds[1] = "2회차";
+		lottary1[1] = 12;
+		lottary2[1] = 13;
+		lottary3[1] = 17;
+		lottary4[1] = 35;
+		lottary5[1] = 40;
+		lottary6[1] = 44;
+
+		//로또 3회차 데이터
+		rounds[2] = "3회차";
+		lottary1[2] = 7;
+		lottary2[2] = 19;
+		lottary3[2] = 25;
+		lottary4[2] = 26;
+		lottary5[2] = 31;
+		lottary6[2] = 40;
+
+		//로또 4회차 데이터
+		rounds[3] = "4회차";
+		lottary1[3] = 7;
+		lottary2[3] = 19;
+		lottary3[3] = 25;
+		lottary4[3] = 26;
+		lottary5[3] = 31;
+		lottary6[3] = 40;
+		
+		//로또 4회차 데이터
+		rounds[4] = "5회차";
+		lottary1[4] = 7;
+		lottary2[4] = 19;
+		lottary3[4] = 25;
+		lottary4[4] = 26;
+		lottary5[4] = 31;
+		lottary6[4] = 40;
+
+		lottoPrint(rounds, lottary1, lottary2, lottary3, lottary4, lottary5, lottary6)
+	};
+
+	var lottoPrint = function(rounds, lottary1, lottary2, lottary3, lottary4, lottary5, lottary6){
+				var strHTML = "";
+
+				for(var i = 0; i < rounds.length; i++){
+					strHTML += "<tr>"
+					strHTML += "<td width='100px' height='40px' align='center'>"
+					strHTML += "<input type='checkbox' class='chk_Btn' name='btn'/>"
+					strHTML += "</td>"
+					strHTML += "<td width='100px' height='40px' align='center'>"
+					strHTML += rounds[i]
+					strHTML += "</td>"
+					strHTML += "<td width='100px' height='40px' align='center'>"
+					strHTML += lottary1[i]
+					strHTML += "</td>"
+					strHTML += "<td width='100px' height='40px' align='center'>"
+					strHTML += lottary2[i]
+					strHTML += "</td>"
+					strHTML += "<td width='100px' height='40px' align='center'>"
+					strHTML += lottary3[i]
+					strHTML += "</td>"
+					strHTML += "<td width='100px' height='40px' align='center'>"
+					strHTML += lottary4[i]
+					strHTML += "</td>"
+					strHTML += "<td width='100px' height='40px' align='center'>"
+					strHTML += lottary5[i]
+					strHTML += "</td>"
+					strHTML += "<td width='100px' height='40px' align='center'>"
+					strHTML += lottary6[i]
+					strHTML += "</td>"
+					strHTML += "</tr>"
+				};
+				
+				var obj = document.getElementById("row");
+				obj.innerHTML = strHTML;
+	};
+	
+	var chg_Line = function(){
+		var btn = document.getElementsByName("btn");
+		var num = 0;
+		var strHTML = "";
+		for (var i=0; i<btn.length; i++)
+		{	num += 1;
+			if (btn[i].checked)
+			{
+				
+			}
+			else{
+				strHTML += "<tr>"
+					strHTML += "<td width='100px' height='40px' align='center'>"
+					strHTML += "<input type='checkbox' class='chk_Btn' name='btn'/>"
+					strHTML += "</td>"
+					strHTML += "<td width='100px' height='40px' align='center'>"
+					strHTML += rounds[i]
+					strHTML += "</td>"
+					strHTML += "<td width='100px' height='40px' align='center'>"
+					strHTML += lottary1[i]
+					strHTML += "</td>"
+					strHTML += "<td width='100px' height='40px' align='center'>"
+					strHTML += lottary2[i]
+					strHTML += "</td>"
+					strHTML += "<td width='100px' height='40px' align='center'>"
+					strHTML += lottary3[i]
+					strHTML += "</td>"
+					strHTML += "<td width='100px' height='40px' align='center'>"
+					strHTML += lottary4[i]
+					strHTML += "</td>"
+					strHTML += "<td width='100px' height='40px' align='center'>"
+					strHTML += lottary5[i]
+					strHTML += "</td>"
+					strHTML += "<td width='100px' height='40px' align='center'>"
+					strHTML += lottary6[i]
+					strHTML += "</td>"
+					strHTML += "</tr>"
+			}
+		}
+		var obj = document.getElementById("row");
+			obj.innerHTML = strHTML;
+	}
+
+	var reset = function(){
+		
+	var strHTML = "";
+
+	for(var i = 0; i < rounds.length; i++){
+		strHTML += "<tr>"
+		strHTML += "<td width='100px' height='40px' align='center'>"
+		strHTML += "<input type='checkbox' class='chk_Btn' name='btn'/>"
+		strHTML += "</td>"
+		strHTML += "<td width='100px' height='40px' align='center'>"
+		strHTML += rounds[i]
+		strHTML += "</td>"
+		strHTML += "<td width='100px' height='40px' align='center'>"
+		strHTML += lottary1[i]
+		strHTML += "</td>"
+		strHTML += "<td width='100px' height='40px' align='center'>"
+		strHTML += lottary2[i]
+		strHTML += "</td>"
+		strHTML += "<td width='100px' height='40px' align='center'>"
+		strHTML += lottary3[i]
+		strHTML += "</td>"
+		strHTML += "<td width='100px' height='40px' align='center'>"
+		strHTML += lottary4[i]
+		strHTML += "</td>"
+		strHTML += "<td width='100px' height='40px' align='center'>"
+		strHTML += lottary5[i]
+		strHTML += "</td>"
+		strHTML += "<td width='100px' height='40px' align='center'>"
+		strHTML += lottary6[i]
+		strHTML += "</td>"
+		strHTML += "</tr>"
+				};
+				
+		var obj = document.getElementById("row");
+		obj.innerHTML = strHTML;
+	}
+  </script>
+ </head>
+ <body onload="init();">
+	<table border='1' cellpadding='0' cellspacing='0' width='800' align='center'>
+	<tr>
+		<td width='100px' height='40px' align='center'>
+			&nbsp;
+		</td>
+		<td width='100px' height='40px' align='center'>
+			구분
+		</td>
+		<td width='100px' height='40px' align='center'>
+			1차추첨
+		</td>
+		<td width='100px' height='40px' align='center'>
+			2차추첨
+		</td>
+		<td width='100px' height='40px' align='center'>
+			3차추첨
+		</td>
+		<td width='100px' height='40px' align='center'>
+			4차추첨
+		</td>
+		<td width='100px' height='40px' align='center'>
+			5차추첨
+		</td>
+		<td width='100px' height='40px' align='center'>
+			6차추첨
+		</td>
+	</tr>
+	<tr>
+		<td width="800px" align="center" colspan="8">
+			<table border="1" celpadding="0" cellspacing="0" width="800px" align="center" id="row">
+			</table>
+		</td>
+	</tr>
+	</table>
+	<div>
+		<input type="button" value="삭제" onclick="chg_Line();"/>
+		<input type="button" value="초기화" onclick="reset();"/>
+	</div>
+ </body>
+</html>

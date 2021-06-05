@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>join</title>
+  <link rel="stylesheet" href="./css/practice07.css"/>
+  <script type="text/javascript" src="./js/practice07.js"></script>
+ </head>
+ <body>
+  <div id="container">
+
+  <!-- 가입창 시작 -->
+
+  	<div id="joinForm">
+		<div id="joinTitle">
+			<span>Join Website</span>
+		</div>
+		<div id="joinId">
+			<span id="joinIdTitle">ID</span>
+			<input type="text" id="joinIdInput" />
+		</div>
+		<div id="joinPass">
+			<span id="joinPassTitle">Password</span>
+			<input type="password" id="joinPassInput"/>
+		</div>
+		<div id="joinName">
+			<span id="joinNameTitle">Name</span>
+			<input type="text" id="joinNameInput"/>
+		</div>
+		<div id="joinTel">
+			<span id="joinTelTitle">Tel</span>
+			<input name="JoinTelInput" type="text" onchange="onlyNum(this);"/>
+			<span class="joinBar">-</span>
+			<input name="JoinTelInput" type="text" />
+			<span class="joinBar">-</span>
+			<input name="JoinTelInput" type="text" />
+		</div>
+		<div id="joinMail">
+			<span id="joinMailTitle">EMail</span>
+			<input type="text" id="joinMailInput"/>
+		</div>
+		<div id="joinBtn">
+			<input type="button" value="Join" id="joinBtnInput" onclick="joinConfirm();"/>
+		</div>
+	</div>
+
+<!-- 가입창 끝 -->
+
+<!-- 로그인창 시작 -->
+
+	<div id="loginForm">
+		<div id="loginTitle">
+			<span>Login Website</span>
+		</div>
+		<div id="loginId">
+			<span>ID</span>
+			<input type="text" id="loginIdInput"/>
+		</div>
+		<div id="loginpass">
+			<span>Password</span>
+			<input type="password" id="loginPassInput"/>
+		</div>
+		<div id="loginBtn">
+			<input type="button" value="Login" onclick="loginSite();"/>
+		</div>
+	</div>
+
+<!-- 로그인창 끝 -->
+
+<!-- 데이터베이스창 시작 -->
+
+	<div id="databaseForm">
+		<div id="databaseTitle">
+			<span>Database</span>
+		</div>
+		<div id="inputData">
+			
+		</div>
+	</div>
+  </div>
+ <!-- 데이터베이스창 끝 --> 	
+
+<!-- 메인페이지창 시작 -->
+
+	<div id="mainPage">
+
+		<!--<div id="mainPageTitle">
+			<span>welcom my poketmon page</span>
+		</div>
+		<div id="mainPageShow">
+			<div id="poketmonImg">
+				<span id="poketmontext">울머기</span>
+				<img src="./img/ulmogi.png"/>
+			</div>
+		</div>
+		<div id="mainPageShow">
+			<div id="poketmonImg">
+				<span id="poketmontext">탐리스</span>
+				<img src="./img/tamless.png"/>
+			</div>
+		</div>
+		<div id="mainPageShow">
+			<div id="poketmonImg">
+				<span id="poketmontext">나옹</span>
+				<img src="./img/nayon.png"/>
+			</div>
+		</div>-->
+	</div>
+
+<!-- 메인페이지창 끝 -->
+
+ </body>
+</html>

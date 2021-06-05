@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	/* layer 레이어 */
+	.lay1{
+		position:absolute;
+		border:3px solid blue;
+		background-color: yellow;
+		width:300px;
+		height:300px;
+		top: 200px;
+		left: 200px;
+		z-index:3;
+	}
+	.lay2{
+		position:absolute;
+		border:3px solid red;
+		background-color: orange;
+		width:200px;
+		height:200px;
+		top: 400px;
+		left: 100px;
+		z-index:2;
+	}
+	.rec1{
+		position:relative;
+		border:3px solid blue;
+		background-color: red;
+		width:200px;
+		height:300px;
+		z-index:1;
+	}
+  </style>
+ </head>
+ <body>
+	<div class="lay1">
+	</div>
+	<div class="lay2">
+	</div>
+	<div class="rec1" id="rec1">
+
+	</div>
+	<div class="rec1" id="rec2">
+
+	</div>
+ </body>
+</html>

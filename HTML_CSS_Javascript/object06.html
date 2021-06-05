@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+	var People = function(name, age){
+		this.name = name;
+		this.age =  age;
+	}
+	//함수로 객체를 만들면 instance화 - 복사본 해주어야한다
+	var People1 = new People("홍길동", 32)
+	var People2 = new People("전우치", 44)
+
+	document.write(People1.name + " : " + People1.age + "<br/>")
+	document.write(People2.name + " : " + People2.age + "<br/>")
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

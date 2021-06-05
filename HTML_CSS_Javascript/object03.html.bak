@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+	<script>
+
+		var food = function(){
+
+			this.Name = "갈비탕";
+			this.Price = 10000;
+
+		};
+
+		var food1 = new food();
+		food1.Name = "떡볶이";
+		food1.Price = 500;
+
+		var food2 = new food();
+		food2.Name = "오뎅";
+		food2.Price = 2000;
+
+	</script>
+ </body>
+</html>

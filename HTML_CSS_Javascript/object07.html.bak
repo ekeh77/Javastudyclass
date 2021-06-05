@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content=""> 
+  <title>Document</title>
+  <script>
+	var Shop = function(url, imgUrl, price, product){
+		this.Url = url;
+		this.imgUrl = imgUrl;
+		this.Price = price;
+		this.Product = product;
+	}
+	var init = function(){
+		var Shops = setDatas();
+		var strHTML = getDiv(Shops)
+		outPut(strHTML,"h2")
+	}
+	var setDatas = function(){
+		var Shops = [];
+		Shops[0] = new Shop("http://www.naver.com","./img/sport01",450000,"비싼 운동 기구1");
+		Shops[1] = new Shop("http://www.naver.com","./img/sport01",450000,"비싼 운동 기구2");
+		Shops[2] = new Shop("http://www.naver.com","./img/sport01",450000,"비싼 운동 기구3");
+		Shops[3] = new Shop("http://www.naver.com","./img/sport01",450000,"비싼 운동 기구4");
+
+		return Shops
+	}
+
+	var getDiv = function(Shops){
+
+		var strHTML = "";
+
+		for(var i=0; i<Shops.length; i++){
+			strHTML +="<a href='" + Shops[i].url + "'>";
+			strHTML +=	"<div class='col'>";
+			strHTML +=		"<span class=''>";
+			strHTML +=			"<img src='" + Shops[i].imgUrl + "'/>";
+			strHTML +=		"</span>";
+			strHTML +=		"<span class=''>";
+			strHTML +=			Shops[i].price;
+			strHTML +=		"</span>";
+			strHTML +=		"<span class=''>";
+			strHTML +=			Shops[i].strProducts;
+			strHTML +=		"</span>";
+			strHTML +=	"</div>";
+			strHTML +="</a>";
+			}
+			return strHTML
+	}
+
+	var outPut = function(strHTML, oID){
+		document.getElementById(oID).innerHTML = strHTML;
+	}
+  </script>
+ </head>
+ <body onload="init();">
+	<div id="h2">
+	</div>
+ </body>
+</html>

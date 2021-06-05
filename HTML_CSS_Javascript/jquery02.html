@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+	
+	var init = function(){
+					
+		$("#msg").append("<div><a href='#'>네이버</a></div>");
+		$("#msg").append("<div><a href='#'>다음</a></div>");
+
+		$("#msg a").append(
+			/*
+			function(index, strHTML)
+			{
+				if(index==0)
+				{
+					this.innerHTML = "asdnakj";
+				}
+				else if(index==1)
+				{
+					this.innerHTML = "asddsjfnskdfdnsk";
+				}
+				
+			}//end function*/
+
+			function(index, strHTML){
+				
+				if(strHTML.indexOf("네이버") != -1){
+					
+					$(this).eq(0).css("font-size","50px");
+
+				}
+
+			}
+
+		);// end append
+
+	};// end init function
+
+  </script>
+ </head>
+ <body onload="init();">
+	<div id="msg">
+		
+	</div>
+ </body>
+</html>

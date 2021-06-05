@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	#container{
+		width: 300px;
+		height: 180px;
+	}
+	#msg, #msg2{
+		width: 300px;
+		height: 30px;
+		clear:left;
+	}
+	.rec{
+		display:block;
+		width:47px;
+		border:1px solid blue;
+		font-size:14px;
+		padding:6px 0px 6px 0px;
+		float:left;
+		text-align:center;
+	}
+	input{
+		font-size: 30px;
+	}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+	var selector = function(){
+		//document.getElementsByName("food");
+		//$("span[name='food']").html("소주");
+		//var objs = $("span[name='food']")
+		//objs[2].innerHTML = "통닭"
+		//$("span[name*='2']").html("맥주");
+		//포함된 글자
+		//$("span[name~='2']").html("맥주");
+		//구분된 글자 포함
+		//$("span[name$='2']").html("맥주");
+		//끝글자
+		//$("span[name^='f']").html("맥주");
+		//시작글자
+		//$("table[width]").html("맥주")
+		//해당속성이 있는글자
+		//$("span[name='food1'][name='student']").html("")
+		//$("span[name='student']:eq(2)").css("background-color","black");
+		//$("span[name='student']:even").css("background-color","black");
+		//$("span[name='student']:first").css("background-color","black");
+		//$("span[name='student']:last").css("background-color","black");
+		//$(".rec:eq(4)").html("aaaa");
+		//$(".rec:gt(1)").css("background-color","black");
+		//$("span:not(span[name='food2'])").css("background-color","black");
+
+		//$("span[name='food']:first-child").css("background-color","black");
+
+		//$("span:contains('갈비탕')").css("background-color","black");
+
+		$("#msg:has(span)").css("background-color","black");
+
+		
+	}
+	
+  </script>
+ </head>
+ <body onload="init();">
+	 <div id="container">
+		<div id="msg" aaa="aaa">
+			<span name="food1" class="rec">갈비탕</span>
+			<span name="food1" class="rec">국밥</span>
+			<span name="food2" class="rec">피자</span>
+			<span name="food2" class="rec">햄버거</span>
+		</div>
+		<div id="msg2">
+			<span name="student" class="rec">김의진</span>
+			<span name="student" class="rec">박지원</span>
+			<span name="student" class="rec">김윤태</span>
+			<a href="www.naver.com">네이버</a>
+		</div>
+	</div>
+	<div>
+		<input type="text" name="id" id="id"/>
+		<input type="text" name="pass" id="pass"/>
+		<input type="button" value="확인" onclick="selector();"/>
+	</div>
+ </body>
+</html>

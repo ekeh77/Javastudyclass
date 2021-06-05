@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	#content{
+		width: 400px;
+		height: 400px;
+		border: 1px solid #cdcdcd;
+	}
+	#firstline > span{
+		display: block;
+		float: left;
+	}
+	#today{
+		width:100px;
+	}
+	#day{
+		width:200px;
+		text-align:right;
+	}
+	#arrow{
+	float: left;
+	margin-left: 40px;
+	cursor: pointer;
+	}
+	#arrow span{
+		display: block;
+		float: left;
+		width: 20px;
+		height: 5px;
+		border: 1px solid #cdcdcd;
+		padding: 5px 0px 15px 5px;
+		font-weight: bold;
+		
+	}
+	.img{
+		display:block;
+		width: 180px;
+		height: 200px;
+		border: 1px solid #cdcdcd;
+		margin-top: 50px;
+	}
+	.mainDiv{
+		float: left;
+		margin-left: 10px;
+	}
+  </style>
+  <script>
+  	var allData = [];
+	var num = 1;
+	var crateData = function(imgNum,discript){
+		this.imgNum = imgNum;
+		this.discript = discript;
+	}
+
+	var showWhat = function(){
+
+		var showSpan = document.getElementById("day");
+		var showData = document.getElementById("indata");
+
+		for (var i=0; i<15; i++)
+		{
+			allData[i] = new crateData(i + "번째 이미지", i + "번째 설명");
+		}
+		
+		strHTML = "";
+
+		strHTML = "<span id='chk_Num'>1</span> <span>/ " + (allData.length - 1); + "</span>"
+
+		showSpan.innerHTML = strHTML;
+
+		strHTML2 = "";
+		strHTML2 += "<div class='mainDiv'>" 
+		strHTML2 += "<span class='img'>" + allData[0].imgNum + "</span>";
+		strHTML2 += "<span class='discript'>" + allData[0].discript + "</span>";
+		strHTML2 += "</div>"
+		strHTML2 += "<div class='mainDiv'>" 
+		strHTML2 += "<span class='img'>" + allData[1].imgNum + "</span>";
+		strHTML2 += "<span class='discript'>" + allData[1].discript + "</span>";
+		strHTML2 += "</div>"
+
+		showData.innerHTML = strHTML2;
+
+	}
+	var arrowLeft = function(){
+
+		var showSpan = document.getElementById("chk_Num");
+
+		var showData = document.getElementById("indata");
+		
+		
+
+		
+		
+		if(num < 2){
+			
+		}
+		else{
+
+			num -= 1
+
+			strHTML = "";
+			strHTML = "<span id='chk_Num'>" + num
+
+			showSpan.innerHTML = strHTML;
+
+			strHTML2 = "";
+			strHTML2 += "<div class='mainDiv'>" 
+			strHTML2 += "<span class='img'>" + allData[(num - 1)].imgNum + "</span>";
+			strHTML2 += "<span class='discript'>" + allData[(num - 1)].discript + "</span>";
+			strHTML2 += "</div>"
+			strHTML2 += "<div class='mainDiv'>" 
+			strHTML2 += "<span class='img'>" + allData[num].imgNum + "</span>";
+			strHTML2 += "<span class='discript'>" + allData[num].discript + "</span>";
+			strHTML2 += "</div>"
+
+			showData.innerHTML = strHTML2;
+
+		}
+
+	}
+
+
+	var arrowRight = function(){
+
+		var showSpan = document.getElementById("chk_Num");
+
+		var showData = document.getElementById("indata");
+		console.log(allData.length)
+		if(num == (allData.length - 1)){
+
+		}
+		else{
+
+			num += 1
+
+		strHTML = "";
+		strHTML = "<span id='chk_Num'>" + num
+		
+		showSpan.innerHTML = strHTML;
+
+		strHTML2 = "";
+		strHTML2 += "<div class='mainDiv'>" 
+		strHTML2 += "<span class='img'>" + allData[(num - 1)].imgNum + "</span>";
+		strHTML2 += "<span class='discript'>" + allData[(num - 1)].discript + "</span>";
+		strHTML2 += "</div>"
+		strHTML2 += "<div class='mainDiv'>" 
+		strHTML2 += "<span class='img'>" + allData[num].imgNum + "</span>";
+		strHTML2 += "<span class='discript'>" + allData[num].discript + "</span>";
+		strHTML2 += "</div>"
+
+		showData.innerHTML = strHTML2;
+
+		}
+		
+
+	}
+
+	var saveData = function(){
+		
+	}
+  </script>
+ </head>
+ <body onload="showWhat();">
+	<div id="container">
+		<div id="content">
+			<div id="firstline">
+				<span id="today">오늘의 특가</span>
+				<span id="day"></span>
+				<div id="arrow">
+					<span id="goLeft" onclick="arrowLeft();">&lt;</span>
+					<span id="goRight" onclick="arrowRight();">&gt;</span>
+				</div>
+			</div>
+			<div id="indata">
+			</div>
+		</div>
+	</div>
+ </body>
+</html>

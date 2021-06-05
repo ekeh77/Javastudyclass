@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+   <style>
+	.lbl{
+		display: block;
+		float: left;
+		width: 100px;
+		font-size: 16px;
+		padding: 5px 0px;
+		border: 1px solid #bbbbbb;
+		background-color: #dedede;
+		text-align: center;
+	}
+	#msg{
+		clear: left;
+	}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+	var test = function(){
+		//선택된놈
+		var objSports = document.getElementsByName("sports");
+		var strHTML = "";
+		for(var i=0; i<objSports.length; i++){
+			if(objSports[i].checked){
+				strHTML = objSports[i].value + " ";
+				document.getElementById("msg").innerHTML = strHTML;
+			}
+		}
+	}
+  </script>
+ </head>
+ <body>
+	<div>
+		<input type="button" value="확인" id="btn" onclick="test();"/>
+	</div>
+	<div>
+		<label class="lbl"><input type="checkbox" name="sports" value="baseball" id="baseball">야구</label>
+		<label class="lbl"><input type="checkbox" name="sports" value="soccor" id="soccor">축구</label>
+		<label class="lbl"><input type="checkbox" name="sports" value="basketball" id="basketball">농구</label>
+		<label class="lbl"><input type="checkbox" name="sports" value="volleyball" id="volleyball">배구</label>
+	</div>
+	<div id="msg">
+
+	</div>
+ </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	.rec{
+		display:block;
+		border:1px solid blue;
+		width:300px;
+		height:40px;
+	}
+	.rec2{
+		display:block;
+		border:1px solid yellow;
+		width:500px;
+		height:60px;
+		background-color:violet;
+	}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+		var test = function(){
+			//1. 잘가를 못가로 바꾼다.
+			$("#msg div").eq(1).html("못가");
+
+			//2.안녕하세요 -> 저리로 꺼져
+			$("#msg.span").eq(0).html("저리로 꺼져");
+			
+			//3. 어서오세요 -> 왜왔어!!
+			$("#msg p").eq(0).html("왜왔어!!");
+
+			//4. 하이 --> 예
+			$("#msg2 font[color='blue']").eq(0).html("예");
+
+			//5. <div>잘가</div>에 class rec를 적용하고 싶어요
+			$("#msg div").eq(0).addClass("rec");
+
+			//6.input type=text --> input type=button 으로 바꾸자
+			$("input[type='text']").attr("type","button");
+			
+			//7. 맨밑에 어서오셔요 class rec2를 적용 font-size:50px
+			$("p").eq(2).attr("class","rec2").css("font-size","50px");
+
+		}
+  </script>
+ </head>
+ <body>
+	<div id="msg">
+		<div>잘가</div>
+		<span class="rec">안녕하세요</span>
+		<span>
+			<a href="#" class="rec">네이버</a>
+		</span>
+		<p>어서오세요</p>
+		<div>어솨</div>
+		<p>어서오세요</p>
+	</div>
+	<div id="msg2">
+		<font color="blue">하이</font>
+	</div>
+	<input type="text" value="나는 바뀔꺼야" />
+	<input type="button" value="확인" onclick="test();" />
+	<p>어서오세요</p>
+ </body>
+</html>

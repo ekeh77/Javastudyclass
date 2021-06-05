@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	.lbl{
+		display: block;
+		float: left;
+		width: 100px;
+		font-size: 16px;
+		padding: 5px 0px;
+		border: 1px solid #bbbbbb;
+		background-color: #dedede;
+		text-align: center;
+	}
+	#msg{
+		clear: left;
+	}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+	var test = function(){
+		var objSports = document.getElementsByName("sports");
+
+		for(var i=0; i<objSports.length; i++){
+			if(objSports[i].checked){
+				document.getElementById("msg").innerHTML = objSports[i].value;
+			}
+		}
+	}
+
+	$(document).ready(
+		function(){
+			$("#btn").on("click",
+				function(){
+					var selectedValue = $("input[name='sports']:checked").val();
+					$("#msg").html(selectedValue);
+				}
+			);
+			$("input[name='sports']").on("click",
+				function(){
+					
+					//$("label").css("background-color","#dedede");
+					//$("label").css("background-color", "green");
+					$("label").css("background-color","#dedede")
+					$("input[name='sports']").each(
+						function(index,item){
+							if(item.checked == true){
+								$("label").eq(index).css("background-color", "green");
+							}
+
+						}
+					);
+				}
+			);
+		}
+	);
+  </script>
+ </head>
+ <body>
+ 	<div>
+		<input type="button" value="확인" id="btn"/>
+	</div>
+	<div>
+		<label class="lbl"><input type="radio" name="sports" value="baseball" id="baseball">야구</label>
+		<label class="lbl"><input type="radio" name="sports" value="soccor" id="soccor">축구</label>
+		<label class="lbl"><input type="radio" name="sports" value="basketball" id="basketball">농구</label>
+		<label class="lbl"><input type="radio" name="sports" value="volleyball" id="volleyball">배구</label>
+	</div>
+	<div id="msg">
+
+	</div>
+ </body>
+</html>

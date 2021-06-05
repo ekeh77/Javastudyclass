@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+  	#container{
+		display: flex;
+	}
+	.menuBar{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding:10px;
+		width: 100px;
+		height: 800px;
+	}
+	.logoDiv{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.logoDiv i {
+		font-size: 50px;
+	}
+	.logoDiv span{
+		font-weight: bold;
+	}
+	.menuDiv{
+		margin-top: 40px;
+	}
+	.menuDiv div{
+		padding: 10px;
+		color: #999999;
+		font-weight: bold;
+	}
+	.menuDiv div span:hover{
+		color: #6633cc;
+	}
+	.iconDiv{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: #999999;
+		margin-top: 40px;
+		margin-right:20px
+	}
+	.iconDiv i{
+		margin: 7px;
+	}
+	.iconDiv i:hover{
+		color: #6633cc;
+	}
+	.contentDiv{
+		width: 1000px;
+		height: 800px;
+		background-color:#cccccc;
+	}
+	.emptyBar{
+		width: 10px;
+		height: 10px;
+	}
+	.topBar{
+		display: flex;
+		justify-content: space-between;
+	}
+	.submitBar{
+		display: flex;
+		font-weight: bold;
+	}
+	.submitBar div{
+		padding: 15px 50px;
+	}
+	.submit{
+		background-color: #6633cc;
+		color: #dddddd;
+		padding: 10px 50px;
+		
+	}
+	.squarespace{
+		margin-right: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.squarespaceDiv{
+		padding: 15px 30px;
+		background-color: #bbbbbb;
+	}
+	.sponsorDiv{
+		font-size: 12px;
+		color:#bbbbbb;
+	}
+	.imgPage img{
+		width: 600px;
+		margin-left: 30px;
+		margin-top: 50px;
+	}
+	.imgText{
+		display: flex;
+		margin-top: 10px;
+	}
+	.imgTextInside div{
+	
+		margin-left: 30px;
+		display: flex;
+	}
+	.imgTextInside span{
+	border-width: 0px 0px 1px 0px;
+	border-color: #999999;
+	border-style: solid;
+	color:	#999999;	
+	display:block;
+	}
+	.imgTextInside span:hover{
+		color:black;
+		border-color: black;
+	}
+	.imgTextInside span:nth-child(2){
+		padding-left: 50px;
+	}
+	.imgPage{
+		position: relative;
+	}
+	.imgPage span{
+		position: absolute;
+		top: 60px;
+		left: 50px;
+		color: #dddddd;
+		font-size: 18px;
+		font-weight: bold; 
+	}
+	.imgPage i{
+		position: absolute;
+		top: 60px;
+		right: 10px;
+		color: #dddddd;
+		font-size: 20px;
+		font-weight: bold; 
+	}
+	.contentAlign{
+		display: flex;
+		align-items: center;
+	}
+	.fa-crown{
+		font-size: 48px;
+		color: #999999;
+	}
+	.count26{
+		color:#6633cc;
+		font-weight: bold;
+		font-size: 38px;
+	}
+	.aprilAlign{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.viewDiv{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: #6633cc;
+		margin-top: 20px;
+		font-size: 15px;
+	}
+	.viewDiv i{
+		font-size: 25px;
+	}
+	.eyeUpDiv{
+		margin-top: 20px;
+		background-color: #bbbbbb;
+		width: 100px;
+		height: 150px;
+		padding: 10px;
+	}
+	.describe{
+		margin-left: 20px;
+	}
+	.title{
+		color:#6633cc;
+		font-weight: bold;
+		font-size: 18px;
+		
+	}
+	.two{
+		margin-left: 20px;
+	}
+	.describe > div{
+		margin-bottom: 10px;
+	}
+	.imgTextInside2{
+		margin-left: 70px;
+	}
+  </style>
+  <script src="https://kit.fontawesome.com/1a2d02a7f1.js" crossorigin="anonymous"></script>
+ </head>
+ <body>
+	<div id="container">
+		<div class="menuBar">
+			<div class="logoDiv">
+				<i class="fab fa-accusoft"></i>
+				<span>CSS DESIGN</span>
+				<span>AWARDS</span>
+			</div>
+			<div class="menuDiv">
+				<div><span>Home</span></div>
+				<div><span>Winners</span></div>
+				<div><span>S.Kudos</span></div>
+				<div><span>Nominees</span></div>
+				<div><span>Awards</span></div>
+				<div><span>Judges</span></div>
+				<div><span>Articles</span></div>
+				<div><span>About</span></div>
+				<div><span>Submit</span></div>
+			</div>
+			<div class="iconDiv">
+				<div>
+					<i class="fab fa-facebook-f"></i>
+					<i class="fab fa-twitter"></i>
+				</div>
+				<div>
+					<i class="fab fa-google-plus-g"></i>
+					<i class="fab fa-google-play"></i>
+				</div>
+				<div>
+					<i class="fas fa-wifi"></i>
+				</div>
+			</div>
+		</div>
+		<div class="contentDiv">
+			<div class="topBar">
+				<div class="emptyBar">
+				</div>
+				<div class="submitBar">
+					<div class="search">
+						<span>SEARCH</span>
+						<i class="fas fa-search"></i>
+					</div>
+					<div class="submit"><span>SUBMIT</span></div>
+				</div>
+				<div class="squarespace">
+					<div class="squarespaceDiv">
+						<i class="fas fa-qrcode"></i>
+						<span>SQUARESPACE</span>
+					</div>
+					<div class="sponsorDiv">
+						Official WOTD Sponsor
+					</div>
+				</div>
+			</div>
+			<div class="contentAlign">
+				<div class="imgTap">
+					<div class="imgPage">
+						<span>DEVSTARS</span>
+						<img src="./img/opera.jpg" />
+						<i class="fas fa-bars"></i>
+					</div>
+					<div class="imgText">
+						<div class="imgTextInside">
+							<div>
+								<span>CREATIVE DESIGN</span>
+								<span>7.7</span>
+							</div>
+							<div>
+								<span>USABUITY & CONTENT</span>
+								<span>7.8</span>
+							</div>
+						</div>
+						<div class="imgTextInside imgTextInside2">
+							<div>
+								<span>CODE & FUNCTIONALITY</span>
+								<span>7.8</span>
+							</div>
+							<div>
+								<span>TOTAL SCORE (AVERAGE)</span>
+								<span>7.8</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="two">
+					<div class="aprilAlign">
+						<div><i class="fas fa-crown"></i></div>
+						<div class="count26">26</div>
+						<div>APRIL</div>
+						<div>2015</div>
+						<div class="eyeUpDiv">
+							<div class="viewDiv">
+								<i class="fas fa-eye"></i>
+								<span>1792</span>
+							</div>
+							<div class="viewDiv">
+								<i class="fas fa-thumbs-up"></i>
+								<span>16</span>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="describe">
+					<div class="title">
+						<span>Devstars Web Development</span>
+					</div>
+					<div>
+						<span>By <b>Devstars</b></span>
+					</div>
+					<div>
+						<span>London, UK</span>
+					</div>
+					<div>
+						<span>We are a London based web design and development agency</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+ </body>
+</html>

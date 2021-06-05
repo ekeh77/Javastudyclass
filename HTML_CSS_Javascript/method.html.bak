@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+	var test = function(){
+		$("#container").add("<div></div>")
+		$("#container div").attr("style","width:100px;height:40px;border:1px solid red;")
+		.html("12345");
+	}
+  </script>
+ </head>
+ <body>
+	<div id="container">
+	</div>
+	<div>
+		<input type="button" value="확인" onclick="test();"/>
+	</div>
+ </body>
+</html>

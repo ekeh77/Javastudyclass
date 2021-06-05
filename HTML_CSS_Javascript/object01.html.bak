@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+
+	var foods = [];
+
+	foods[0] = {
+		Name : "갈비탕",
+		Price : 10000
+	};
+	foods[1] = {
+		Name : "햄버거",
+		Price : 8000
+	};
+	foods[2] = {
+		Name : "김치찌개,
+		Price : 9000
+	};
+	
+	for(var i=0; i<foods.length; i++){
+		document.write(foods[i].Name + ":" + foods[i].Price + "<br/>");
+	}
+	
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

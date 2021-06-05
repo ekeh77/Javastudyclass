@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+	//dom = document of model
+	/*
+	$(document).ready(	
+		function(){
+			$("#msg").html("안녕하세요");
+		}
+	);
+	*/
+	var init = function(){
+		alert("onload");
+		$("#msg1").html("onload");
+	}
+	$(document).ready(
+		function(){
+			alert("document.ready");
+			$("#msg2").html("document.ready");
+		}
+	);
+	$(
+		function(){
+			alert("$");
+			$("#msg3").html("$");
+		}
+	);
+  </script>
+ </head>
+ <body onload="init();">
+	<div id="msg1"></div>
+	<div id="msg2"></div>
+	<div id="msg3"></div>
+ </body>
+</html>

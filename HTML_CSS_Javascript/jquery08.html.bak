@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+		$(document).ready(
+			
+			function(){
+				
+			$("#msg").html("선택해주세요");
+
+			$("input[name='position']").on("click",
+				
+				function(index){
+					$("#msg").html(this.value + "를 선택하셨습니다");
+				}
+
+			)
+
+			/*
+			$("#pos1").on("click", 
+			
+				function(){ 
+					alert(1) 	
+
+					}//$("#pos1").on function()
+
+			);//$("#pos1").on
+			
+			$("#pos2").on("click",
+			
+				function(){ 
+					alert(2) 	
+
+					}//$("#pos2").on function()
+
+			)//$("#pos2").on
+			
+
+			$("#pos3").on("click",
+			
+				function(){ 
+					alert(3) 	
+
+					}//$("#pos3").on function()
+
+			)//$("#pos3").on
+			*/
+
+			}//(document).ready function()
+
+		);//$(document).ready
+  </script>
+ </head>
+ <body>
+	<div>
+		<input type="checkbox" name="position" value="부장" id="pos1" />부장
+		<input type="checkbox" name="position" value="차장" id="pos2" />차장
+		<input type="checkbox" name="position" value="과장" id="pos3" />과장
+	</div>
+	<div id="msg">
+		
+	</div>
+ </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+  	body{
+		margin:0px;
+		padding:0px;
+	}
+	.btn{
+		display:block;
+		width: 150px;
+		border:1px solid blue;
+		background-color:orange;
+		font-size:25px;
+		padding: 10px 0px 10px 0px;
+		text-align:center;
+		float:left;
+	}
+	#submenu{
+		position:absolute;
+		left:0px;
+		top:53px;
+		z-index:1000;
+		display:block;
+		width:150px;
+		height:40px;
+		border:2px solid violet;
+		visibility: hidden;
+	}
+	#submenu span{
+		
+	}
+  </style>
+  <script>
+	var show_menu = function(value){
+		document.getElementById("submenu").style = "visibility:" + value;
+	}
+  </script>
+ </head>
+ <body>
+	 <div>
+		<span class="btn" onmouseover="show_menu('visible');" onmouseout="show_menu('hidden');">
+			나 버튼1
+		</span>
+		<span class="btn">
+			나 버튼2
+		</span>
+	</div>
+	<!-- layer submenus -->
+	<div id="submenu" onmouseover="show_menu('visible');">
+		<span>서브메뉴1</span>
+		<span>서브메뉴2</span>
+		<span>서브메뉴3</span>
+	</div>
+ </body>
+</html>

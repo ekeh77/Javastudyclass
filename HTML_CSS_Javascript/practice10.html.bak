@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+
+	#container{
+		border-top: 2px solid #cdcdcd;
+		border-bottom : 2px solid #cdcdcd;
+		border-right: 1px solid #cdcdcd;
+		border-left: 1px solid #cdcdcd;
+		width:910px;
+		height:100px;
+	}
+	
+	#categoryName{
+		width:150px;
+		height:20px;
+		background-color: #384861;
+		color: #ffffff;
+		font-size:15px;
+		font-weight:bold;
+		padding:15px;
+		cursor:pointer;
+		float:left;
+	}
+	.categoryName span{
+		display:block;
+		float:left;
+	}
+	.categoryName span:first-child{
+	
+	}
+	.categoryName span:last-child{
+		text-align:right;
+		width:80px;
+		color:skyblue;
+	}
+	#categoryContent{
+		float:left;
+		height:20px;
+		padding:15px;
+		font-size:13px;
+		border-bottom : 1px solid #cdcdcd;
+		width:700px;
+	}
+
+	#categoryContent span{
+		display:block;
+		float:left;
+		margin: 0px 8px;
+		cursor:pointer;
+	}
+	.allContent{
+		clear: both;
+		margin: 0px 8px 10px 8px;
+		width: 700px;
+		font-size:15px;
+		cursor:pointer;
+		font-weight: bold;
+		border-bottom: 1px solid #cdcdcd;
+	}
+	#allContent span{
+		display:block;
+	}
+	#all{
+		display:block;
+		
+	}
+
+	/* color */
+
+	#colorName{
+		width:150px;
+		height:20px;
+		background-color: #384861;
+		color: #ffffff;
+		font-size:15px;
+		font-weight:bold;
+		padding:15px;
+		cursor:pointer;
+		float:left;
+		
+	}
+	.colorName span{
+		display:block;
+		float:left;
+	}
+
+	#colorContent{
+		float:left;
+		height:20px;
+		padding:15px;
+		font-size:13px;
+	}
+
+	#colorContent span{
+		display:block;
+		float:left;
+		margin: 0px 8px;
+	}
+	
+	.circle{
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		float: left;
+		margin: -4px 8px 0px 8px;
+		cursor: pointer;
+		
+	}
+	.pick{
+		float: left;
+		margin-right: 10px;
+	}
+	#red{
+		background-color:red;
+	}
+	#orange{
+		background-color:orange;
+	}
+	#yellow{
+		background-color:yellow;
+	}
+	#green{
+		background-color:green;
+	}
+	#sky{
+		background-color:skyblue;
+	}
+	#blue{
+		background-color:blue;
+	}
+	#black{
+		background-color:black;
+	}
+	#gray{
+		background-color:gray;
+	}
+	#white{
+		background-color:white;
+		border:1px solid #cdcdcd;
+	}
+	#plusData{
+		border:1px solid black;
+		padding-top:10px;
+		width: 910px;
+		height: 30px;
+		display:none;
+	}
+	.cancle{
+		float:left;
+		cursor:pointer;
+	}
+	#allCancel{
+		margin:0px 10px;
+		float:left;
+		cursor:pointer;
+		border-right: 1px solid #cdcdcd;
+		padding-right: 8px;
+	}
+	.cancleDiv{
+		cursor:pointer;
+	}
+	.categoryPick{
+		margin:0px 10px;
+		cursor:pointer;
+	}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+  	var num = 0;
+
+	var menuLong = function(){
+
+		num += 1;
+
+		if(num%2 == 1)
+		{
+		$("#plusCategory").html("-");
+		$("#plusCategory").css("font-size","25px");
+		$("#plusCategory").css("margin-top","-10px");
+		$("#categoryName").css("height","100px");
+		$("#categoryContent").css("height","100px");
+		$("#container").css("height","180px");
+		$("#allContent").css("display","block");
+		$("#allContent").css("font-size","20px");
+		$("#allContent").html("◀ 대분류 총 10개의 카테고리");
+		$("#allContent").attr("class","allContent");
+		}
+		else
+		{
+		$("#plusCategory").html("+");
+		$("#plusCategory").css("font-size","15px");
+		$("#plusCategory").css("margin-top","0px");
+		$("#categoryName").css("height","20px");
+		$("#categoryContent").css("height","20px");
+		$("#container").css("height","100px");
+		$("#allContent").css("display","none");
+		}
+	}
+	var categoryInput =function(obj){
+		var categoryName = $(obj).html();
+		$("#plusData").css("display","block")
+		$("#plusData").append("<div name='categoryDel' onclick='categoryDel(this);'><div class='categoryPick pick'>" + categoryName + "</div><div class='cancle'>X</div></div>")
+		
+
+	}
+	var dataInput = function(obj){
+		colorArray = ["red","orange","yellow","green","sky","blue","black","gray","white"]
+		$("#plusData").css("display","block")
+		for(var i=0; i<colorArray.length; i++){
+			if(colorArray[i] == obj.id){
+				$("#plusData").append("<div id='num"+ i +"' class='cancleDiv' onclick='delColor(this);'><div id='"+ colorArray[i] +"' name='colorPick' class='circle pick'></div><div class='cancle'>X</div></div>")
+			}
+		}
+	}
+	var delColor = function(obj){
+		$(obj).css("display","none");
+	}
+	var allCancel = function(){
+		$("#plusData").css("display","none")
+		$("div .cancleDiv").css("display","none")
+		$("div[name='categoryDel']").css("display","none")
+	}
+	var categoryDel = function(obj){
+		$(obj).css("display","none")
+	}
+  </script>
+ </head>
+ <body>
+	<div id="container">
+		<div id="category">
+			<div id="categoryName" class="categoryName" onclick="menuLong();">
+				<span>카테고리</span>
+				<span id="plusCategory">+</span>
+			</div>
+			<div id="categoryContent">
+				<div id="allContent">
+				
+				</div>
+				<div id="byby">
+					
+					<span name="categoryContent" onclick="categoryInput(this);">디지털/가전</span>
+					<span name="categoryContent" onclick="categoryInput(this);">생활/건강</span>
+					<span name="categoryContent" onclick="categoryInput(this);">스포츠/레저</span>
+					<span name="categoryContent" onclick="categoryInput(this);">패션잡화</span>
+					<span name="categoryContent" onclick="categoryInput(this);">출산/육아</span>
+					<span name="categoryContent" onclick="categoryInput(this);">가구/인테리어</span>
+					<span name="categoryContent" onclick="categoryInput(this);">패션의류</span>
+					<span name="categoryContent" onclick="categoryInput(this);">화장품/미용</span>
+					<span name="categoryContent" onclick="categoryInput(this);">식품</span>
+				</div>
+				
+			</div>
+		</div>
+
+		<div id="color">
+			<div id="colorName" class="colorName">
+				<span>색상</span>
+			</div>
+			<div id="colorContent">
+				<span>색상</span>
+				<div id="red" name="color" class="circle" onclick="dataInput(this);"></div>
+				<div id="orange" name="color" class="circle" onclick="dataInput(this);"></div>
+				<div id="yellow" name="color" class="circle" onclick="dataInput(this);"></div>
+				<div id="green" name="color" class="circle" onclick="dataInput(this);"></div>
+				<div id="sky" name="color" class="circle" onclick="dataInput(this);"></div>
+				<div id="blue" name="color" class="circle" onclick="dataInput(this);"></div>
+				<div id="black" name="color" class="circle" onclick="dataInput(this);"></div>
+				<div id="gray" name="color" class="circle" onclick="dataInput(this);"></div>
+				<div id="white" name="color" class="circle" onclick="dataInput(this);"></div>
+			</div>
+		</div>
+	</div>
+	<div id="plusData">
+		<div id="allCancel" onclick="allCancel();">전체해제</div>
+	</div>
+ </body>
+</html>

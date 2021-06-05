@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	#menus{
+		
+	}
+	#menus .cMenu{
+		display: block;
+		width: 120px;
+		border: 1px solid #555555;
+		background-color: #efefef;
+		font-size: 15px;
+		padding: 10px 0px;
+		text-align: center;
+		float:left;
+		border-radius: 7px;
+	}
+  </style>
+  <script>
+	//start
+	var init = function(){
+		//1.데이터를 만들었어요
+		var datas = setDatas();
+		
+		//2.메뉴를 만들어야해요
+		makeMenus(datas.menuNames,datas.menuUrls);
+		
+	}
+	//data를 만들자
+	var setDatas = function(){
+		
+		var menuNames = [];
+		var menuUrls = [];
+
+		menuNames[0] = "네이버";
+		menuNames[1] = "다음";
+		menuNames[2] = "옥션";
+
+		menuUrls[0] = "http://www.naver.com";
+		menuUrls[1] = "http://www.daum.net";
+		menuUrls[2] = "http://www.auction.co.kr";
+		
+		var menuObject = new Object();
+		menuObject.menuNames = menuNames;
+		menuObject.menuUrls = menuUrls;
+		
+		return menuObject;
+
+	}
+	//menu를 만드는 함수
+	var makeMenu = function(menuName, menuUrl){
+
+		var strHTML = "";
+		
+		strHTML += "<a href='" + menuUrl + "'><span class='cMenu'>" + menuName + "</span></a>"
+
+		return strHTML;
+	}
+	//메뉴를 제대로 만들자
+	var makeMenus = function(Names, Urls){
+		var strHTML = "";
+
+		for(var i=0; i<Names.length; i++){
+			strHTML += makeMenu(Names[i], Urls[i]);
+		}
+		return strHTML;
+	}
+  </script>
+ </head>
+ <body onload="init();">
+  <div id="menus">
+ </body>
+</html>

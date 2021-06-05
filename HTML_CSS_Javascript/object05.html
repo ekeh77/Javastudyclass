@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/object05.css"/>
+  <script>
+
+	//1.객체
+
+	var init = function(){
+		//1.data를 서버에서 가져오는게 첫번째
+		//1.data를 만들자
+		var strLinks = [];
+		var strImgs = [];
+		var prices = [];
+		var strProducts = [];
+
+		strLinks[0] = "http://www.naver.com";
+		strImgs[0] = "./img/sport01.png";
+		prices[0] = 450000;
+		strProducts[0] = "비싼 운동 기구";
+
+		var strHTML = getDiv(strLinks, strImgs, prices, strProducts);
+
+		outPut(strHTML,"container");
+	}
+
+	var getDiv = function(strLinks, strImgs, prices, strProducts){
+
+		var strHTML = "";
+
+		for(var i=0; i<strLinks.length; i++){
+			strHTML +="<a href='" + strLinks[i] + "'>";
+			strHTML +=	"<div class='col'>";
+			strHTML +=		"<span class=''>";
+			strHTML +=			"<img src='" + strImgs[i] + "'/>";
+			strHTML +=		"</span>";
+			strHTML +=		"<span class=''>";
+			strHTML +=			prices[i];
+			strHTML +=		"</span>";
+			strHTML +=		"<span class=''>";
+			strHTML +=			strProducts[i];
+			strHTML +=		"</span>";
+			strHTML +=	"</div>";
+			strHTML +="</a>";
+			}
+			return strHTML
+	}
+
+	//출력함수
+
+	var outPut = function(strHTML, oID){
+		document.getElementById(oID).innerHTML = strHTML;
+	}
+
+  </script>
+ </head>
+ <body onload="init()">
+ 	<div id="container">
+	<!--
+		<a href="http://www.naver.com">
+			<div class="col">
+				<span class="">
+					<img src="./img/sport01.png"/>
+				</span>
+				<span class="">
+					450000
+				</span>
+				<span class="">
+					비싼 운동 기구
+				</span>
+			</div>
+		</a>
+		-->
+	</div>
+ </body>
+</html>

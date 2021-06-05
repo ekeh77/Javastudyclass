@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	#container{
+		width: 500px;
+		height: 500px;
+		border: 1px solid skyblue;
+		position : relative;
+
+	}
+	#contentDiv{
+		width: 500px;
+		height: 500px;
+
+	}
+	#hiddenDiv{
+		position: absolute;
+		width: 150px;
+		height: 500px;
+		background-color: #ffffff;
+		border:1px solid skyblue;
+		transform: translateX(-160px);
+		z-index:2;
+	}
+	#top{
+		width: 480px;
+		height: 30px;
+		padding: 10px 10px;
+		background-color: skyblue;
+		margin-bottom: 10px;
+	}
+	#top span{
+		display: block;
+		float: left;
+		margin-right:10px;
+		padding: 5px;
+	}
+	#menuBtn{
+		width: 40px;
+		cursor: pointer;
+		background-color: blue;
+		color: #ffffff;
+		border-radius: 10px;
+		text-align: center;
+	}
+	#top span:nth-child(2){
+		font-weight:bold;
+	}
+	#top input{
+		border: 1px solid #cdcdcd;
+		width: 300px;
+		padding: 3px;
+		margin-top: 3px;
+	}
+	#center{
+		width: 480px;
+		height: 400px;
+		margin: 0px auto;
+		background-color: #efefef;
+		padding: 10px 0px;
+	}
+	#centerContent{
+		width: 450px;
+		height: 150px;
+		margin: 0px auto;
+		background-color: orange;
+		text-align: center;
+		margin-bottom: 10px;
+		cursor: pointer;
+	}
+	#centerContentlist{
+		width: 450px;
+		height: 250px;
+		margin: 0px auto;
+	}
+	.listRow{
+		width: 100px;
+		height: 110px;
+		background-color: skyblue;
+		float: left;
+		margin: 5px;
+		cursor: pointer;
+	}
+	.listRow img{
+		display: block;
+		width: 90px;
+		height: 90px;
+		float: left;
+		margin-left: 5px;
+	}
+	.listRow span{
+		float: left;
+		display: block;
+		font-size: 13px;
+		margin-left: 5px;
+	}
+	.ani{
+		animation:showMenu 0.5s ease-in-out;
+		animation-fill-mode: forwards;
+	}
+	@keyframes showMenu{
+		0%{
+			transform: translateX(-160px);
+		}
+		100%{
+			transform: translateX(0px);
+		}
+	}
+	#hiddenTop{
+		width: 150px;
+		height: 50px;
+		background-color: skyblue;
+	}
+	#hiddenTop span{
+		display: block;
+		float: left;
+		margin:5px 5px;
+		padding: 5px;
+	}
+	#hiddenMenuBtn{
+		width: 40px;
+		cursor: pointer;
+		background-color: blue;
+		color: #ffffff;
+		border-radius: 10px;
+		text-align: center;
+		
+	}
+	#hiddenTop span:nth-child(2){
+		font-weight:bold;
+	}
+	#hiddenContent{
+		width: 150px;
+		height: 450px;
+		
+	}
+	.hiddenMenu{
+		width: 150px;
+		height: 50px;
+		background-color: yellow;
+		margin-bottom: 10px;
+		cursor: pointer;
+	}
+	.hiddenMenu:hover{
+		background-color: violet;
+	}
+	.grayDiv{
+		width: 500px;
+		height: 500px;
+		background-color: #dfdfdf;
+		position: absolute;
+		opacity: 0.5;
+		z-index:1;
+	}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+	$(document).ready(
+		function(){
+
+			$("#menuBtn").on("click",
+				function(){
+					$("#hiddenDiv").addClass("ani");
+					$("#grayDiv").addClass("grayDiv");
+				}
+			);
+
+			$("#hiddenMenuBtn").on("click",
+				function(){
+					$("#hiddenDiv").removeClass("ani");
+					$("#grayDiv").removeClass("grayDiv");
+				}
+			);
+		}
+	);
+  </script>
+ </head>
+ <body>
+	<div id="container">
+		<div id="grayDiv"></div>
+		<div id="hiddenDiv">
+			<div id="hiddenTop">
+				<span id="hiddenMenuBtn">메뉴</span>
+				<span>Youtube</span>
+			</div>
+			<div id="hiddenContent">
+				<div id="hiddenMenu" class="hiddenMenu">
+					<span>메뉴1</span>
+				</div>
+				<div id="hiddenMenu" class="hiddenMenu">
+					<span>메뉴2</span>
+				</div>
+				<div id="hiddenMenu" class="hiddenMenu">
+					<span>메뉴3</span>
+				</div>
+				<div id="hiddenMenu" class="hiddenMenu">
+					<span>메뉴4</span>
+				</div>
+				<div id="hiddenMenu" class="hiddenMenu">
+					<span>메뉴5</span>
+				</div>
+				<div id="hiddenMenu" class="hiddenMenu">
+					<span>메뉴6</span>
+				</div>
+				<div id="hiddenMenu" class="hiddenMenu">
+					<span>메뉴7</span>
+				</div>
+			</div>
+		</div>
+			<div id="contentDiv">
+				<div id="top">
+					<span id="menuBtn">메뉴</span>
+					<span>Youtube</span>
+					<input type="text" placeholder="검색"/>
+				</div>
+				<div id="center">
+					<div id="centerContent">
+						<span>센터에 컨텐츠</span>
+					</div>
+					<div id="centerContentlist">
+						<div id="listRow" class="listRow">
+							<img src="#" />
+							<span>이미지 컨텐츠<span>
+						</div>
+						<div id="listRow" class="listRow">
+							<img src="#" />
+							<span>이미지 컨텐츠<span>
+						</div>
+						<div id="listRow" class="listRow">
+							<img src="#" />
+							<span>이미지 컨텐츠<span>
+						</div>
+						<div id="listRow" class="listRow">
+							<img src="#" />
+							<span>이미지 컨텐츠<span>
+						</div>
+						<div id="listRow" class="listRow">
+							<img src="#" />
+							<span>이미지 컨텐츠<span>
+						</div>
+						<div id="listRow" class="listRow">
+							<img src="#" />
+							<span>이미지 컨텐츠<span>
+						</div>
+						<div id="listRow" class="listRow">
+							<img src="#" />
+							<span>이미지 컨텐츠<span>
+						</div>
+						<div id="listRow" class="listRow">
+							<img src="#" />
+							<span>이미지 컨텐츠<span>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+ </body>
+</html>

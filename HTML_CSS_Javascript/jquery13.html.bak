@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+	/* ECMA JANASCRIPT 자바스트립트의 표준 규격화 */
+	var test = function(){
+		
+		var objProcs = document.getElementsByName("proc")
+		/*
+		objProcs[0].innerHTML = "1";
+		objProcs[1].innerHTML = "2";
+		objProcs[2].innerHTML = "3";
+		objProcs[3].innerHTML = "4";
+		*/
+		for(var i=0; i<objProcs.length; i++){
+			objProcs[i].innerHTML = i + 1;
+		}
+	}
+  </script>
+ </head>
+ <body>
+	<div>
+		<span name="proc"></span>
+		<span name="proc"></span>
+		<span name="proc"></span>
+	</div>
+	<div name="proc">
+		
+	</div>
+	<div name="proc">
+		
+	</div>
+	<div>
+		<input type="button" value="확인" onclick="test();"/>
+	</div>
+ </body>
+</html>

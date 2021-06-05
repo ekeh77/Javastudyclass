@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+	var cities = [
+		{
+		id: "pusan",
+		name: "부산"
+		},
+		{
+		id: "seoul",
+		name: "서울"
+		},
+		{
+		id: "daegu",
+		name: "대구"
+		},
+		{
+		id: "changwon",
+		name: "창원"
+		}
+	];
+
+	var init = function(){
+		var strHTML = "";
+
+		for(var i=0; i<cities.length; i++){
+			strHTML += "<option value='" + cities[i].id + "'>" + cities[i].name + "</option>";
+		}
+
+		document.getElementById("sel").innerHTML = strHTML;
+	};
+
+	var selectValue = function(){
+		document.getElementById("msg").innerHTML = document.getElementById("sel").value;	
+	};
+
+	var chgOption = function(){
+		cities[2].id = "ulsan";
+		cities[2].name = "울산";
+
+		init();
+	}
+
+	var chgOption2 = function(){
+		var objSel = document.getElementById("sel")
+		objSel.options[0].value = "ulsan";
+		objSel.options[0].text = "울산";
+	}
+
+	$(
+		function(){
+			
+			var strHTML = "";
+
+			for(var i=0; i<cities.length; i++){
+				strHTML += "<option value='" + cities[i].id + "'>" + cities[i].name + "</option>";
+			}
+			$("#sel").html = strHTML;
+			
+		}
+	);
+  </script>
+ </head>
+ <body>
+	<div>
+		<select id="sel">
+		<select>
+	</div>
+	<div id="msg">
+		
+	</div>
+	<div>
+		<input type="button" value="확인"/>
+	</div>
+ </body>
+</html>

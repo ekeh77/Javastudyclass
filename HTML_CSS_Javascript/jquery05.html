@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+
+	var init = function(){
+		
+		//1. select box의 초기값을 부산으로 바꾸자
+		$("#region").val("P");
+	}
+
+	var test = function(){
+
+		//1. select box, combo box 유효성검사 - 빈값이면 선택하세요
+		var selectedValue = $("#region").val();
+		if(selectedValue == ""){
+			
+			alert("선택하세요")
+
+		}//if(selectedValue == "")
+
+		//남자를 선택하면 경고창을 M을 선택, 여자를 선택하면 F를 선택 둘다 선택 안했으면 주굴래!!
+		/*
+		var selectedGender = $("input[name='gender']")
+		
+			if(selectedGender[0].checked){
+				alert("M을 선택")
+			}
+			else if(selectedGender[1].checked){
+				alert("F을 선택")
+			}
+			else{
+				alert("주굴래!!")
+			}
+		*/
+		/*
+		var isChecked1 = $("input[name='gender']").eq(0).prop("checked");
+		var isChecked2 = $("input[name='gender']").eq(1).prop("checked");
+		if(isChecked1)
+		{
+			alert($("input[name='gender']").eq(0).val());
+		}
+		else if(isChecked2)
+		{
+			alert($("input[name='gender']").eq(1).val());
+		}
+		else
+		{
+			alert("주굴래!!");
+		}
+		*/
+
+		$("input[name='gender']").each(
+
+			function(index, item){
+				if(item.checked){
+					alert(item.value)
+				}
+				else{
+					alert("주굴래!!")
+				}
+			}
+		)
+
+	}// test = function
+  </script>
+ </head>
+ <body onload="init();">
+	 <div id="container">
+		<div>
+			<select id="region">
+				<option value="">선택하세요</option>
+				<option value="S">서울</option>
+				<option value="P">부산</option>
+				<option value="C">창원</option>
+				<option value="K">김해</option>
+			</select>
+		</div>
+		<div>
+			<input type="radio" name="gender" value="M" id="male"/>남자
+			<input type="radio" name="gender" value="F" id="female"/>여자
+		</div>
+		<div>
+			<input type="checkbox" name="hobby" value="M"/>턱걸이
+			<input type="checkbox" name="hobby" value="F"/>다이어트
+		</div>
+		<div>
+			<input type="button" value="확인" onclick="test();"/>
+		</div>
+	</div>
+ </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+
+	
+
+	var init = function(){
+
+		document.getElementById("btn").onclick = chk;
+
+	}
+
+	window.onload = init;
+
+	var chkValue = function(eName, eTitle){
+
+		var objRadios = document.getElementsByName(eName);
+		
+		var checkedNum = 0;
+		
+		for(var i=0; i<objRadios.length; i++){
+			console.log(checkedNum);
+			if(objRadios[i].checked == true){
+				checkedNum += 1;
+			}
+			
+		}
+
+		if(checkedNum == 0){
+			alert( eTitle  + "에 적어도 하나는 체크 하세요");
+			return false;
+		}
+
+	}
+	/*
+	var chkValue2 = function(){
+
+		var objChk = document.getElementsByName("hobby");
+		
+		var checkedNum = 0;
+
+		for(var i=0; i<objChk.length; i++){
+			
+			if(objChk.chekced){
+				checkedNum += 1;
+			}
+		}
+
+		if(checkedNum == 0){
+			alert("취미에 적어도 하나는 체크 하세요");
+			
+		}
+	}
+	*/
+	var chk = function(){
+		chkValue("gender","성별");
+		chkValue("hobby","취미");
+	}
+  </script>
+ </head>
+ <body>
+	<div>
+		<label>
+			<input type="radio" id="genM" name="gender" value="m" />
+			<span>남자</span>
+		</label>
+		<label>
+			<input type="radio" id="genF" name="gender" value="f" />
+			<span>여자</span>
+		</label>
+		<label>
+			<input type="radio" id="genE" name="gender" value="e" />
+			<span>기타</span>
+		</label>
+	</div>
+
+	<div>
+		<label>
+			<input type="checkbox" id="hobby1" name="hobby" value="1" />
+			<span>때리기</span>
+		</label>
+		<label>
+			<input type="checkbox" id="hobby2" name="hobby" value="2" />
+			<span>괴롭히기</span>
+		</label>
+		<label>
+			<input type="checkbox" id="hobby3" name="hobby" value="3" />
+			<span>못살게 굴기</span>
+		</label>
+	</div>
+
+	<div>
+		<input type="button" value="확인" id="btn">
+	</div>
+ </body>
+</html>

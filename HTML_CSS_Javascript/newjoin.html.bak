@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+  .textdiv, .inputdiv{
+	float:left;
+	
+  }
+  .textdiv{
+	text-align:center;
+	font-weight: bold;
+  }
+  div{
+	margin: 5px;
+  }
+  fieldset{
+	width: 850px;
+	height: 400px;
+	border-width: 5px 5px 10px 5px;
+	border-color: #ccccff;
+  }
+  legend{
+	font-size: 50px;
+	color:#cc99ff;
+  }
+  .margin{
+	margin: 10px 0px 0px 0px;
+  }
+  .joinbutton{
+	margin: 100px 0px 0px 500px;
+	font-size: 20px;
+	color:#cc33ff;
+	border: 2px solid #cc99ff;
+	background-color: #ccccff;
+	border-radius: 10px;
+	}
+  .changecolor:hover{
+	color:#cc99ff;
+  }
+  .inputhover:hover{
+	border: 2px solid #cc99ff;
+  }
+  .phonenumbersize{
+	width: 40px
+  }
+  .joinbutton:hover{
+	background-color: #ffffff;
+	}
+  </style>
+ </head>
+ <body>
+ 	<div id="container">
+		<form name="joinform" action="website">
+			<fieldset>
+				<legend>Join</legend>
+					<div class="textdiv">
+						<div>
+							<span>ID</span>
+						</div>
+						<div>
+							<span>Password</span>
+						</div>
+						<div>
+							<span>Name</span>
+						</div>
+						<div class="margin">
+							<span>Gender</span>
+						</div>
+						<div class="margin">
+							<span>Phone number</span>
+						</div>
+						<div>
+							<span>Email</span>
+						</div>
+						<div>
+							<span>What do you want this website?</span>
+						</div>
+					</div>
+					<div class="inputdiv">
+						<div>
+							<input class="inputhover" type="text" name="id" />
+						</div>
+						<div>
+							<input class="inputhover" type="text" name="password" />
+						</div>
+						<div>
+							<input class="inputhover" type="text" name="name" />
+						</div>
+						<div>
+							<label class="changecolor">male
+								<input type="radio" name="gender" value="M" />
+							</label>
+							<label class="changecolor">female
+								<input type="radio" name="gender" value="F" />
+							</label>
+						</div>
+						<div>
+							<select class="inputhover" name="phonenumber" >
+								<option>010</option>
+								<option>011</option>
+								<option>017</option>
+								<option>018</option>
+							</select>
+							<span>-</span>
+							<input  class="phonenumbersize inputhover" type="text" name="phonenumber" />
+							<span>-</span>
+							<input class="phonenumbersize inputhover" type="text" name="phonenumber" />
+							<input type="button" value="verify"/>
+						</div>
+						<div>
+							<input class="inputhover" type="text" placeholder="input your email ID" name="emailid" />
+							<span>@</span>
+							<select class="inputhover" name="emailad">
+								<option>naver.com</option>
+								<option>daum.net</option>
+								<option>yahoo.com</option>
+								<option>gmail.com</option>
+							</select>
+						</div>
+						<div>
+							<label class="changecolor">more infomation
+								<input type="checkbox" name="what" value="info" />
+							</label>
+							<label class="changecolor">something fun
+								<input type="checkbox" name="what" value="fun" />
+							</label>
+							<label class="changecolor">i don't know
+								<input type="checkbox" name="what" value="dontknow" />
+							</label>
+							<label class="changecolor">whatever
+								<input type="checkbox" name="what" value="ever" />
+							</label>
+						</div>
+						<div>
+							<input class="joinbutton" type="submit" value="Join" />
+						</div>
+					</div>
+			</fieldset>
+		</form>
+	</div>
+ </body>
+</html>
