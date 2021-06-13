@@ -1,0 +1,88 @@
+.login{
+	width:300px;
+	height:210px;
+	border: 1px solid black;
+	border-radius: 10px;
+	background-color: orange;
+	margin: 100px
+	
+}
+.logintext{
+	color: blue;
+	background-color: orange;
+	width: 100px;
+	border-radius: 10px;
+	text-align: center;
+	padding: 5px 0px;
+	color: white;
+	margin-left: 10px;
+	margin-top: 10px;
+	border: 1px solid white;
+	font-weight:bold;
+}
+.inputID{
+	width:260px;
+	text-align:center;
+	margin-top: 10px;
+	margin-left: 10px;
+	background-color: orange;
+	padding: 10px;
+	color: white;
+	border-radius: 5px;
+	border: 1px solid white;
+}
+.inputPassword{
+	width:260px;
+	text-align:center;
+	margin-top: 10px;
+	margin-left: 10px;
+	background-color: orange;
+	padding: 10px;
+	color: white;
+	border-radius: 5px;
+	border: 1px solid white;
+}
+.join{
+	float:left;
+	margin-top: 10px;
+	background-color: orange;
+	border-radius: 10px;
+	padding: 5px;
+	color: white;
+	margin-left: 10px;
+	margin-right: 130px;
+	border: 1px solid white;
+}
+.find{
+	float:left;
+	margin-top: 10px;
+	background-color: orange;
+	border-radius: 10px;
+	padding: 5px;
+	color: white;
+	border: 1px solid white;
+}
+.hoverthing:hover{
+	background-color: white;
+	border: 1px solid orange;
+	color: orange;
+	cursor:pointer;
+}
+.inside{
+	width:100px;
+	background-color: white;
+	color: black;
+	border-radius: 10px;
+	padding: 2px;
+	margin-left: 70px;
+}
+.opacityhover:hover{
+	background-color: orange;
+	opacity: 0.5;
+	color: white;
+}
+.holediv{
+	height: 500px;
+	background-color: #444444;
+	overflow:auto
+}

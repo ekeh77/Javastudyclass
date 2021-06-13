@@ -1,0 +1,12 @@
+.col{
+	float:left;
+	width: 170px;
+	height: 250px;
+	border: 1px solid red;
+	text-align: center;
+	padding: 5px 0px 5px 0px;
+}
+.col span{
+	width: 170px;
+	display: block;
+}

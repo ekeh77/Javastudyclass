@@ -1,0 +1,134 @@
+/* join 스타일 */
+
+#joinForm{
+	border: 1px solid #cdcdcd;
+	width: 300px;
+	height: 400px;
+	padding: 10px;
+	float:left;
+	margin-right: 10px;
+}
+#joinForm span{
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+#joinForm div{
+	width: 400px;
+	height: 50px;
+	clear: left;
+	margin-bottom: 10px;
+}
+#joinForm input{
+	padding: 3px;
+	border-radius: 5px;
+	display: block;
+}
+#joinTitle{
+	font-size: 30px;
+}
+#joinTel input{
+	width: 50px;
+	float: left; 
+}
+#joinBtn input{
+	margin-left: 250px;
+	cursor: pointer;
+}
+.joinBar{
+	display: block;
+	float: left;
+	margin: 0px 5px;
+}
+
+/* login 스타일 */
+
+#loginForm{
+	border: 1px solid #cdcdcd;
+	width: 300px;
+	height: 400px;
+	padding: 10px;
+	float:left;
+	margin-right: 10px;
+}
+#loginForm div{
+	width: 400px;
+	height: 50px;
+	clear: left;
+	margin-bottom: 10px;
+}
+#loginForm span{
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+#loginForm input{
+	padding: 3px;
+	border-radius: 5px;
+	display: block;
+}
+#loginTitle{
+	font-size: 30px;
+}
+
+/* database 스타일 */
+
+#databaseForm{
+	border: 1px solid #cdcdcd;
+	width: 300px;
+	height: 400px;
+	padding: 10px;
+	float:left;
+}
+#databaseTitle{
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+#loginId{
+	margin-top: 50px;
+	margin-left: 60px;
+}
+#loginpass{
+	margin-left: 60px;
+}
+#loginBtn{
+	margin-top: 150px;
+	margin-left: 230px;
+	cursor: pointer;
+}
+#inputData span {
+display: block;
+}
+
+/* mainpage 스타일 */
+
+#mainPage{
+	width: 985px;
+	height: 400px;
+	clear: left;
+	margin: 10px 10px 0px 0px;
+}
+#mainPageTitle{
+	font-size: 30px;
+	font-weight: bold;
+	padding: 10px;
+}
+#mainPageShow{
+	border: 1px solid #cdcdcd;
+	width: 300px;
+	height: 300px;
+	float:left;
+	margin-right: 10px;
+}
+#poketmonImg img{
+	margin-left: 50px;
+	width: 200px;
+	height: 200px;
+	}
+#poketmontext{
+	display: block;
+	margin-left: 120px;
+	font-size: 30px;
+	font-weight: bold;
+}

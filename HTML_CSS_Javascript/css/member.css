@@ -1,0 +1,118 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	background-color: #f5f6f7;
+}
+#wrap{
+	margin:0% 37% 0% 37%;
+	width: 26%;
+}
+.textbox1{
+	/*border: 1px solid orange;*/
+	width: 295px;
+	font-size: 14px;
+	margin-top: 10px;
+	border-width: 0px;
+}
+
+.row1{
+	display:block;
+	width: 400px;
+	font-size: 14px;
+	padding: 3px 0px 3px 0px;
+	font-family: ±¼¸²;
+	font-weight: bolder;
+	/*border:1px solid #cccccc;*/
+}
+.row2{
+	display:block;
+	width: 400px;
+	height: 40px;
+	border: 1px solid #dedede;
+	border-radius: 5px;
+	background-color: #ffffff;
+}
+.row2 .col1{
+	display: block;
+	width: 300px;
+	height: 40px;
+	float:left;
+	/*border: 1px solid red;*/
+}
+
+.row2 .col2{
+	display: block;
+	width: 95px;
+	font-size: 14px;
+	float: left;
+	padding: 10px 0px 12px 0px;
+	color: #cdcdcd
+	/*border: 1px solid blue;*/
+}
+.row2 .gender{
+	width:20px;
+	height:20px;
+	margin-top:10px;
+	display:block;
+	float:left;
+}
+.row2 .intr{
+	width: 20px;
+	height:20px;
+	margin-top:10px;
+	display:block;
+	float:left;
+}
+.row2 .rTxt{
+	display:block;
+	width:100px;
+	float:left;
+	padding-top:8px;
+
+	
+}
+
+#userBirth span{
+	width:125px;
+	float:left;
+}
+#userBirth .empty{
+	width: 11px;
+	height: 5px;
+	display: block;
+}
+#userBirth .row2 #userMonth{
+	width:125px;
+	font-sisze:15px;
+	margin-top: 8px;
+	border-style: none;
+}
+
+#selectIntr{
+	width:393px;
+	font-sisze:15px;
+	margin-top: 8px;
+	border-style: none;
+}
+.btn{
+	background-color:#03c751;
+	text-decoration: none;
+	color:#ffffff;
+	font-weight: bold;
+	display:block;
+	width:150px;
+	float:left;
+	text-align:center;
+	padding: 10px 0px 10px 0px;
+	border-radius:10px;
+
+}
+.line{
+	clear:both;
+}
+.msg{
+	width: 395px;
+	height: 25px;
+	display: block;
+	color: red;
+}

@@ -1,0 +1,13 @@
+.row{
+		clear:left;
+	}
+.col{
+		display: block;
+		width: 120px;
+		border: 1px solid #bbb;
+		background-color: #dedede;
+		font-size: 16px;
+		padding: 12px 0px 12px 0px;
+		float: left;
+		text-align: center;
+	}

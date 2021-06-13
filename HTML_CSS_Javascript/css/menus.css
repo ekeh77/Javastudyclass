@@ -1,0 +1,22 @@
+.menus{
+	clear:left;
+}
+
+.menu{
+	border: 1px solid #999999;
+	display: block;
+	width: 100px;
+	background-color:#dfdfdf;
+	text-align:center;
+	font-size: 15px;
+	padding: 5px 0px 5px 0px;
+	float:left;
+	border-radius:10px;
+	margin : 0px 5px 0px 0px ;
+}
+.menu:hover{
+	background-color:red;
+}
+#menu2 > .menu:nth-child(2){
+	background-color:blue;
+}
